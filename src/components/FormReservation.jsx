@@ -11,6 +11,7 @@ export default function FormReservation(){
                     id='nombre' 
                     placeholder="Ingrese un nombre" 
                     type="text"/>
+                    
                     <label>Apellidos</label>
                     <input 
                     id= 'apellidos' 
@@ -29,7 +30,8 @@ export default function FormReservation(){
                     <input 
                     id= 'email'
                     placeholder="Ingrese un correo electrónico" 
-                    type="email"/>  
+                    type="email"/> 
+
                     <label>Teléfono</label>
                     <input 
                     id='telefono'  
