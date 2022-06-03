@@ -1,9 +1,11 @@
 import React, { Fragment } from "react";
-import Reservation from "./components/Reservation";
+import NavBar from "./components/NavBar.jsx";
+import Reservation from "./components/Reservation.jsx";
 
 function App() {
   return (
     <Fragment>
+      <NavBar/>
       <Reservation/>
     </Fragment>
   );
