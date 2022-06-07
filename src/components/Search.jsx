@@ -1,4 +1,5 @@
 import React from 'react';
+import {ImgExp, TitleExp, ContainerExp, TagsExp, ContainerBtExp} from './styles/Styles.jsx';
 
 const Etiquetas= ['Ubicacion', 'Transporte', 'Duracion']
 
@@ -12,25 +13,25 @@ export default function Search (){
                 </section>
                     ))}
         </nav>
+        <ContainerExp>
+            <ImgExp>
+                <TitleExp>Título</TitleExp>
+            </ImgExp>
             <section>
-                <p></p>
-            </section>
-            <section>
-                <section>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                </section>
-                <section>
+                <ContainerBtExp>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                </ContainerBtExp>
+                <TagsExp>
                     <section>
-                        <h5></h5>
-                        <p></p>
+                        <h5>Título</h5>
+                        <p>Precio</p>
                     </section>
-                    <section>
-                        <a>Reserva ahora</a>
-                    </section>
-                </section>
+                    <a>Reserva ahora</a>
+                </TagsExp>
             </section>
+        </ContainerExp>
         </>
     )
 }

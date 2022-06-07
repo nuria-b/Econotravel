@@ -40,6 +40,20 @@ export const InputForm = styled.input`
     text-indent: 0.5em;  
 `
 
+export const HeroImg = styled.section`
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+`
+
+export const TextHero = styled.p`
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+`
+
 /*--- FormReservation ---*/
 export const FormStyle = styled(FlexColumn)`
     justify-content: center;
@@ -99,3 +113,27 @@ export const Checkbox = () => (
       </StyledCheckbox>
     </CheckboxContainer>
 )
+
+/* Search */
+
+export const ImgExp = styled(HeroImg)`
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
+    width: 249px; 
+    height: 381px;
+`
+export const TitleExp = styled(TextHero)`
+    top: 50%;
+    left: 50%;
+`
+export const ContainerExp = styled.section`
+    width: 15.55em;
+`
+export const TagsExp = styled(FlexRow)`
+    justify-content: space-between;
+`
+export const ContainerBtExp = styled.section`
+    display: flex;
+    gap: 0.5em;
+    button{width: 2em;};
+`
+
