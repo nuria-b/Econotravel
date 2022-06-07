@@ -13,27 +13,27 @@ export const FlexColumn = styled.form`
     flex-direction: column;
     gap: 0.2em;
 `
-
 export const Buttons = styled.button`
-    background: #4c8055;
-    border: #4c8055;
-    color: white;
+    background: var(--bg-button);
+    border: var(--border);
+    color: var(--font-color-bt);
     padding: 0.5em 5.5em;
     box-shadow: 0 0.4em 0.4em -0.4em #000000;
     margin: 0.5em 0 2em 0;
+
     &:hover{
-        background: lightgreen;
+        background: var(--hover-primary);
     }
 `
 
 export const LabelForm = styled.label`
-    color: #e7e1d1;
+    color: var(--font-color-l);
     font-size: 2vmin;
 `
 
 export const InputForm = styled.input`
     background: none;
-    color: #2d572c ;
+    color: var(--font-color);
     border: none;
     border-bottom: 0.1em solid #c4c8b3;
     font-size: 2.5vmin;
@@ -56,11 +56,12 @@ export const Form1 = styled(FlexColumn)`
 `
 
 export const Form2 = styled(FlexColumn)`
-    border: 0.1em solid #c4c8b3; 
+    border: 0.1em solid var(--border); 
     padding: 2em;
     width: 20em;
+
     h2{
-        color: red;
+        color: var(--font-color-pay);
     }
 `
 
@@ -78,7 +79,7 @@ const StyledCheckbox = styled.section`
 const Icon = styled.svg`
   fill: none;
   stroke: black;
-  stroke-width: 0.2em;
+  stroke-width: 0.5em;
   border: 0.1em solid;
   border-radius: 0.2em;
 `
