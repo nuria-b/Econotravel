@@ -21,7 +21,6 @@ export const Buttons = styled.button`
     padding: 0.5em 5.5em;
     box-shadow: 0 0.4em 0.4em -0.4em #000000;
     margin: 0.5em 0 2em 0;
-
     &:hover{
         background: lightgreen;
     }
@@ -60,7 +59,6 @@ export const Form2 = styled(FlexColumn)`
     border: 0.1em solid #c4c8b3; 
     padding: 2em;
     width: 20em;
-
     h2{
         color: red;
     }
