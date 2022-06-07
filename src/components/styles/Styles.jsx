@@ -171,3 +171,19 @@ export const ContainerBtExp = styled.section`
     button{width: 2em;};
 `
 
+/*--- WhoWeAre ---*/
+export const ContainerW= styled(FlexRow)`
+    justify-content: center;
+`
+
+export const ProfileW = styled(FlexColumn)`
+    align-items: center;
+    
+    img{
+        width: 15.55em;
+    }
+`
+
+export const InfoW = styled.section`
+   
+`

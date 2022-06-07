@@ -3,6 +3,7 @@ import {createGlobalStyle} from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   :root{
+    --font: Roboto;
     --bg-img-nav: #4B7F55;
     --bg-button: #526956;
     --hover-primary: #88CF4E;
@@ -20,14 +21,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; 
     font-family: var(--font)
   } 
 
   body{
     background: var(--bg-page);
+    margin: 0;
+    padding: 0;
   }
 `
 

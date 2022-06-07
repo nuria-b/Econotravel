@@ -1,5 +1,5 @@
 import React from "react";
-import {Buttons, FlexColumn, FlexRow, Form1, Form2, FormStyle, Checkbox, InputForm, LabelCheck, LabelForm } from "./styles/Styles.jsx";
+import {Buttons, FlexColumn, FlexRow, Form1, Form2, FormStyle, Checkbox, InputForm, LabelCheck, LabelForm } from "../styles/Styles.jsx";
 
 export default function FormReservation(){
     return (

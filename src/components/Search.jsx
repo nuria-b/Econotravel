@@ -11,7 +11,7 @@ export default function Search (){
                 <section key={experienciaMasPopular}>
                     <a href={`${experienciaMasPopular}`}>{experienciaMasPopular}</a>
                 </section>
-                    ))}
+            ))}
         </nav>
         <ContainerExp>
             <ImgExp>
