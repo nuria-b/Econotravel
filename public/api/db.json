@@ -9,7 +9,7 @@
             "precio": "250€ por persona",
             "duracion": "5h",
             "accesibilidad": "Actividad disponible para todas las edades. Disponemos de bicicletas accesibles para personas con movilidad reducida en el tren inferior así como sillines con capacidad para niños menores de 5 años (peso máximo 20kg).",
-            "Ubicación": "Montaña",
+            "Ubicacion": "Montaña",
             "Transporte": "Bicicleta", 
             "Duracion": "Excursión larga"
         },
@@ -21,7 +21,7 @@
             "precio": "280€ por persona",
             "duración": "4h",
             "accesibilidad": "Actividad disponible para todas las edades. Pasarela para silla de ruedas disponible bajo reserva. ",
-            "Ubicación": "Playa", 
+            "Ubicacion": "Playa", 
             "Transporte": "Barco",
             "Duracion":  "Excursión larga"
         },
@@ -33,7 +33,7 @@
             "precio": "200€ por persona",
             "duración": "4h",
             "accesibilidad": "Actividad disponible para todas las edades. Accesibilidad garantizada para sillas de ruedas.",
-            "Ubicación": "Ciudad", 
+            "Ubicacion": "Ciudad", 
             "Transporte": "A pie",
             "Duracion": "Excursión larga"
         },
@@ -45,7 +45,7 @@
             "precio": "145€ por persona",
             "duración": "3h",
             "accesibilidad": "Actividad disponible para todas las edades. El acceso al huerto en silla de ruedas está garantizado.",
-            "Ubicación": "Montaña",
+            "Ubicacion": "Montaña",
             "Transporte": "A pie", 
             "Duracion": "Excursión corta"
         },
@@ -57,7 +57,7 @@
             "precio": "125€ por persona",
             "duración": "2h",
             "accesibilidad": "Actividad disponible para todas las edades. El acceso al museo y al restaurante en silla de ruedas está garantizado.",
-            "Ubicación": "Montaña",
+            "Ubicacion": "Montaña",
             "Transporte": "A pie", 
             "Duracion": "Excursión corta"
         },
@@ -69,7 +69,7 @@
             "precio": "150€ por persona",
             "duración": "3h",
             "accesibilidad": "Actividad disponible para todas las edades. Las personas que requieran bicicleta adaptada deben avisar con antelación para garantizar su disponibilidad.",
-            "Ubicación": "Ciudad",
+            "Ubicacion": "Ciudad",
             "Transporte": "Bibicleta", 
             "Duracion": "Excursión corta"
         },
@@ -81,7 +81,7 @@
             "precio": "320€ por persona",
             "duración": "6h",
             "accesibilidad": "Actividad disponible para todas las edades. Las personas que requieran adaptaciones de movilidad deberán informar a la organización con anterioridad.",
-            "Ubicación": "Ciudad", 
+            "Ubicacion": "Ciudad", 
             "Transporte": "A pie",
             "Duracion": "Excursión larga"
         },
@@ -93,7 +93,7 @@
             "precio": "400€ por persona",
             "duración": "8h",
             "accesibilidad": "Por asignar",
-            "Ubicación": "Ciudad", 
+            "Ubicacion": "Ciudad", 
             "Transporte": "A pie",
             "Duracion": "Excursión larga"
         },
@@ -105,7 +105,7 @@
             "precio": "800€ por persona",
             "duración": "4h",
             "accesibilidad": "Actividad disponible para todas las edades. Las personas que requieran adaptaciones de movilidad deberán informar a la organización con anterioridad.",
-            "Ubicación": "Montaña", 
+            "Ubicacion": "Montaña", 
             "Transporte": "A pie",
             "Duracion": "Excursión larga"
         }

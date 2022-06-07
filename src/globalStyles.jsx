@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
     --hover-secondary: #B986D5;
     --font-color-read: #562C9C;
     --border: #4B7F55;
-    --font-color: #4B7F55;
-    --font-color-bt: white;
+    --font-color-1: #4B7F55;
+    --font-color-2: white;
     --font-color-pay: red;
     --font-color-l:;
     --bg-page:#ffeabc;

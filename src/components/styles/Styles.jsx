@@ -16,7 +16,7 @@ export const FlexColumn = styled.form`
 export const Buttons = styled.button`
     background: var(--bg-button);
     border: var(--border);
-    color: var(--font-color-bt);
+    color: var(--font-color-2);
     padding: 0.5em 5.5em;
     box-shadow: 0 0.4em 0.4em -0.4em #000000;
     margin: 0.5em 0 2em 0;
@@ -85,9 +85,6 @@ export const SearchBar = styled(FlexRow)`
         height: 3em;
     }
 `
-
-
-
 /*--- FormReservation ---*/
 export const FormStyle = styled(FlexColumn)`
     justify-content: center;
@@ -148,27 +145,40 @@ export const Checkbox = () => (
     </CheckboxContainer>
 )
 
-/* Search */
+/*--- Search ---*/
+export const ContainerImg = styled.section`
+    position: relative;
+    text-align: center;
+` 
 
-export const ImgExp = styled(HeroImg)`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
+export const ImgExp = styled.img`
     width: 249px; 
     height: 381px;
 `
-export const TitleExp = styled(TextHero)`
+
+export const TitleExp = styled.h4`
+    color: var(--font-color-2);
+    position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
 `
+
 export const ContainerExp = styled.section`
     width: 15.55em;
 `
+
 export const TagsExp = styled(FlexRow)`
     justify-content: space-between;
 `
+
 export const ContainerBtExp = styled.section`
     display: flex;
     gap: 0.5em;
-    button{width: 2em;};
+
+    button{
+        width: 6em;
+    };
 `
 
 /*--- WhoWeAre ---*/
