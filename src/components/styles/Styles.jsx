@@ -54,6 +54,40 @@ export const TextHero = styled.p`
     transform: translate(-50%, -50%);
 `
 
+/*--- Navbar ---*/
+export const NavStyle = styled(FlexRow)`
+    justify-content: space-evenly;
+    background: var(--bg-nav);
+    //position: fixed;
+    width: 100%;
+
+    img{
+        height: 4.5em;
+    }
+
+    button{
+        background: none;
+        border: none; 
+        cursor: pointer;
+    }
+`
+
+export const SearchBar = styled(FlexRow)` 
+    background: var(--bg-input-search);
+    box-shadow: 0 0.4em 0.4em -0.5em var(--color-boxShadow);
+    gap: 0;
+
+    input{      
+        text-indent: 0.5em; 
+        background: none;
+        border: none;
+        width: 60vmin;
+        height: 3em;
+    }
+`
+
+
+
 /*--- FormReservation ---*/
 export const FormStyle = styled(FlexColumn)`
     justify-content: center;

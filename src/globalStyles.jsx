@@ -15,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
     --font-color-l:;
     --bg-page:#ffeabc;
     --bg-nav:;
+    --bg-input-search: white;
+    --color-boxShadow: #000000;
   }
 
   * {
