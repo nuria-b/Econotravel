@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
-import NavBar from "./components/NavBar.jsx";
-import GlobalStyle from "./globalStyles.jsx";
+import React, { Fragment } from 'react';
+import NavBar from './components/NavBar.jsx';
+import GlobalStyle from './globalStyles.jsx';
 import Search from './components/Search.jsx';
-import WhoWeAre from "./components/InfoFooter/WhoWeAre.jsx";
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <GlobalStyle/>
       <NavBar/>
       <Search/>
-      <WhoWeAre/>
+      <Footer/>
     </Fragment>
   );
 }
