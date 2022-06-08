@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Getinfo from '../servicios/Getinfo.jsx';
 import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp } from './styles/Styles.jsx';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 const Etiquetas= ['Ubicacion', 'Transporte', 'Duracion']
 
@@ -24,9 +25,14 @@ export default function Search (){
         <>
             <nav>
                 {Etiquetas.map((experienciaMasPopular)=>(
-                    <section key={experienciaMasPopular}>
-                        <a href={`${experienciaMasPopular}`}>{experienciaMasPopular}</a>
-                    </section>
+                    <BrowserRouter>
+                        <section key={experienciaMasPopular}>
+                            <Link to={`${experienciaMasPopular}`}>{experienciaMasPopular}</Link>
+                        </section>
+                        <Routes>
+                            <Route path='/' element={}></Route>
+                        </Routes>
+                    </BrowserRouter>
                 ))}
             </nav>      
             {     
