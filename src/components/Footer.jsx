@@ -3,16 +3,17 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import WhoWeAre from './InfoFooter/WhoWeAre.jsx';
 import HowDoesItWork from './InfoFooter/HowDoesItWork.jsx';
 import PaymentMethods from './InfoFooter/PaymentMethods.jsx';
+import { FooterElements } from './styles/Styles.jsx';
 
 export default function Footer(){
     return(
         <footer>
             <BrowserRouter>
-                <nav>
+                <FooterElements>
                     <Link to='/howdoesitwork'>¿Cómo funciona?</Link>
                     <Link to='/whoweare'>¿Quiénes somos?</Link>
                     <Link to='/paymentmethods'>Medios de pago</Link>
-                </nav>  
+                </FooterElements>  
                 
                 <Routes>
                     <Route path='/howdoesitwork' element={<HowDoesItWork />}></Route>

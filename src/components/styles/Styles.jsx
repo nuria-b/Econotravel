@@ -146,26 +146,66 @@ export const Checkbox = () => (
 )
 
 /*--- Search ---*/
+
+export const GridSearch = styled.section`
+    display: grid;
+    grid-template-rows: repeat(3, 100%);
+    grid-template-columns: repeat(3, 15em);
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    column-gap: 6em;
+    row-gap: 5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 4em;
+    margin-right: 4em;
+    
+    @media (max-width: 1200px) {
+        &{
+            grid-template-rows: repeat(2, 100%);
+            grid-template-columns: repeat(2, 15em);
+            column-gap: 6em;
+        }
+    }
+
+    @media (max-width: 700px) {
+        &{
+            grid-template-rows: repeat(1, 100%);
+            grid-template-columns: repeat(1, 15em);
+        }
+    }   
+  
+`
+
 export const ContainerImg = styled.section`
     position: relative;
     text-align: center;
+    &:hover{
+        background-color: var(--hover-secondary);
+    }
 ` 
-
 export const ImgExp = styled.img`
     width: 249px; 
     height: 381px;
+    opacity: 1;
+    transition: opacity .5s;
+    &:hover {
+        opacity: 0.5;
+    }
 `
 
 export const TitleExp = styled.h4`
     color: var(--font-color-2);
+    width: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
 `
 
 export const ContainerExp = styled.section`
-    width: 15.55em;
+    width: 15.55em;  
 `
 
 export const TagsExp = styled(FlexRow)`
@@ -201,3 +241,9 @@ export const ProfileW = styled(FlexColumn)`
 export const InfoW = styled.section`
    
 `
+/*--- Footer ---*/
+export const FooterElements = styled.section`
+    display:flex;
+    justify-content:center;
+    `
+
