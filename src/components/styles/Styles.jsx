@@ -154,7 +154,7 @@ export const GridSearch = styled.section`
     justify-content: center;
     align-items: center;
     place-items: center;
-    column-gap: 10em;
+    column-gap: 6em;
     row-gap: 5em;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -163,7 +163,6 @@ export const GridSearch = styled.section`
     
     @media (max-width: 1200px) {
         &{
-            display: grid;
             grid-template-rows: repeat(2, 100%);
             grid-template-columns: repeat(2, 15em);
             column-gap: 6em;
@@ -172,7 +171,6 @@ export const GridSearch = styled.section`
 
     @media (max-width: 700px) {
         &{
-            display: grid;
             grid-template-rows: repeat(1, 100%);
             grid-template-columns: repeat(1, 15em);
         }
