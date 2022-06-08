@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     --bg-nav:;
     --bg-input-search: white;
     --color-boxShadow: #000000;
+    --bg-footer: #526956;
   }
 
   * {

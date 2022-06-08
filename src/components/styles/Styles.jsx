@@ -242,8 +242,14 @@ export const InfoW = styled.section`
    
 `
 /*--- Footer ---*/
-export const FooterElements = styled.section`
-    display:flex;
+export const FooterElements = styled(FlexRow)`
     justify-content:center;
-    `
+    background: var(--bg-footer);
+    height: 4em;
+
+    .link{
+        color: var(--font-color-2);
+        text-decoration: none;
+    }   
+`
 
