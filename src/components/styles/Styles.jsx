@@ -183,14 +183,23 @@ export const GridSearch = styled.section`
 export const ContainerImg = styled.section`
     position: relative;
     text-align: center;
+    &:hover{
+        background-color: var(--hover-secondary);
+    }
 ` 
 export const ImgExp = styled.img`
     width: 249px; 
     height: 381px;
+    opacity: 1;
+    transition: opacity .5s;
+    &:hover {
+        opacity: 0.5;
+    }
 `
 
 export const TitleExp = styled.h4`
     color: var(--font-color-2);
+    width: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
