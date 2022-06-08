@@ -180,6 +180,10 @@ export const ContainerBtExp = styled.section`
         width: 6em;
     };
 `
+export const FilterExp = styled(FlexRow)`
+    justify-content: center;
+    margin: 2em;
+`
 
 /*--- WhoWeAre ---*/
 export const ContainerW= styled(FlexRow)`
