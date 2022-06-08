@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Getinfo from '../servicios/Getinfo.jsx';
-import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp } from './styles/Styles.jsx';
+import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch } from './styles/Styles.jsx';
 
 const Etiquetas= ['Ubicacion', 'Transporte', 'Duracion']
 
@@ -28,33 +28,37 @@ export default function Search (){
                         <a href={`${experienciaMasPopular}`}>{experienciaMasPopular}</a>
                     </section>
                 ))}
-            </nav>      
+            </nav>
+            <GridSearch>      
             {     
                 info.map (singleExp => 
-                    <ContainerExp> 
-                        <ContainerImg>
-                            <ImgExp src={singleExp.img}/>
-                            <TitleExp>{singleExp.titulo}</TitleExp>
-                        </ContainerImg>
+                
+                        <ContainerExp> 
+                            <ContainerImg>
+                                <ImgExp src={singleExp.img}/>
+                                <TitleExp>{singleExp.titulo}</TitleExp>
+                            </ContainerImg>
 
-                        <section>
-                            <ContainerBtExp>
-                                <button>{singleExp.Ubicacion}</button>
-                                <button>{singleExp.Transporte}</button>
-                                <button>{singleExp.Duracion}</button>
-                            </ContainerBtExp>
-                            <TagsExp>
-                                <section>
-                                    <h5>{singleExp.id}</h5>
-                                    <p>{singleExp.precio}</p>
-                                </section>
+                            <section>
+                                <ContainerBtExp>
+                                    <button>{singleExp.Ubicacion}</button>
+                                    <button>{singleExp.Transporte}</button>
+                                    <button>{singleExp.Duracion}</button>
+                                </ContainerBtExp>
+                                <TagsExp>
+                                    <section>
+                                        <h5>{singleExp.id}</h5>
+                                        <p>{singleExp.precio}</p>
+                                    </section>
 
-                                <a href='#'>Reserva ahora</a>
-                            </TagsExp>
-                        </section>
-                    </ContainerExp>
+                                    <a href='#'>Reserva ahora</a>
+                                </TagsExp>
+                            </section>
+                        </ContainerExp>
+                    
                 )
             } 
+            </GridSearch>
         </>
     )
 }

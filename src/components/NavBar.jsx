@@ -15,10 +15,7 @@ export default function NavBar(){
                 <IconContext.Provider value={{ size:'2em', color:'var(--bg-img-nav)' }}>
                     <form>
                         <SearchBar> 
-                                <input 
-                                type='text' 
-                                placeholder='Busca una actividad, un lugar,...' 
-                                id='search'/>
+                                <input type='text' placeholder='Busca una actividad, un lugar,...' id='search'/>
                                 <button for='search'><BiSearchAlt for='search'/></button>   
                         </SearchBar>
                     </form>
