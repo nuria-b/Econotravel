@@ -30,7 +30,7 @@ export default function Search (){
                             <Link to={`${experienciaMasPopular}`}>{experienciaMasPopular}</Link>
                         </section>
                         <Routes>
-                            <Route path='/' element={}></Route>
+                            <Route path='/' ></Route>
                         </Routes>
                     </BrowserRouter>
                 ))}
