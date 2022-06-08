@@ -230,3 +230,9 @@ export const ProfileW = styled(FlexColumn)`
 export const InfoW = styled.section`
    
 `
+/*--- Footer ---*/
+export const FooterElements = styled.section`
+    display:flex;
+    justify-content:center;
+    `
+
