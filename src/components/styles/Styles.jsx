@@ -62,7 +62,7 @@ export const NavStyle = styled(FlexRow)`
     width: 100%;
 
     img{
-        height: 4.5em;
+        height: 10em;
     }
 
     button{
@@ -85,6 +85,7 @@ export const SearchBar = styled(FlexRow)`
         height: 3em;
     }
 `
+
 /*--- FormReservation ---*/
 export const FormStyle = styled(FlexColumn)`
     justify-content: center;
