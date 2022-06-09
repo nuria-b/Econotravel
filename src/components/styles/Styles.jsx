@@ -261,6 +261,23 @@ export const ContainerExp = styled.section`
 
 export const TagsExp = styled(FlexRow)`
     justify-content: space-between;
+
+    h5{
+        color: var(--font-color-1)
+    }
+
+    p{
+        opacity: 0.5;
+    }
+
+    .link{
+        color: var(--font-color-3);
+        text-decoration: none;
+
+        &:hover{
+            color: var(--hover-secondary)
+        }
+    }
 `
 
 export const ContainerBtExp = styled.section`
@@ -269,6 +286,10 @@ export const ContainerBtExp = styled.section`
     
     button{
         width: 6em;
+        border-radius: 2em;
+        border: 0.1em solid var(--border);;
+        background: white;
+        color: var(--font-color-1)
     };
 `
 export const FilterExp = styled(FlexRow)`
@@ -277,11 +298,11 @@ export const FilterExp = styled(FlexRow)`
 
     .link{
         color: var(--font-color-3);
-        text-decoration: underline 0.1em;
-        
+        text-decoration: none;
 
         &:hover{
             opacity: 0.5;
+            text-decoration: underline  0.1em;
             text-underline-offset: 0.5em;
         }
     }
