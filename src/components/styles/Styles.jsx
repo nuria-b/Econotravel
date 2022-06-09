@@ -62,7 +62,7 @@ export const NavStyle = styled(FlexRow)`
     width: 100%;
 
     img{
-        height: 4.5em;
+        height: 10em;
     }
 
     button{
@@ -70,6 +70,51 @@ export const NavStyle = styled(FlexRow)`
         border: none; 
         cursor: pointer;
     }
+`
+
+/*--- Homepage ---*/
+
+export const HomeStyle = styled(FlexColumn)`
+    justify-content: center;
+    alingn-content: center;
+    align-items: center;
+    gap: 5em;
+    h2{
+        color:  var(--font-color-1);
+    }
+`
+export const HomeButton = styled(Buttons)`
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+`
+export const Publicidad = styled(HeroImg)`
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
+    width: 974px;
+    height: 543px;
+    top: 4.5em;
+    margin-top: 2em;
+`
+export const PublicidadButton = styled(HomeButton)`
+    top: 50%;
+    left: 50%;
+`
+export const Oferta= styled(HeroImg)`
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
+    width: 910px;
+    height: 394px;
+`
+export const OfertaText= styled.p`
+    text-align: center;
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--font-color-2)
+`
+export const OfertaButton = styled(HomeButton)`
+    top: 70%;
+    left: 50%;
 `
 
 export const SearchBar = styled(FlexRow)` 
