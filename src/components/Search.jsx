@@ -34,7 +34,7 @@ export default function Search (){
                             <Route path='/' ></Route>
                         </Routes>
                     </BrowserRouter>
-                ))}
+                    ))}
             </FilterExp> 
 
             <GridSearch>      
@@ -42,7 +42,7 @@ export default function Search (){
                     info.map ((singleExp, i)=> 
                         <ContainerExp key={i}> 
                             <ContainerImg>
-                                <ImgExp src={singleExp.img}/>
+                                <ImgExp src={singleExp.img} alt={singleExp.titulo}/>
                                 <TitleExp className='titlexp'>{singleExp.titulo}</TitleExp>
                             </ContainerImg>
                             
@@ -57,7 +57,13 @@ export default function Search (){
                                         <h5>{singleExp.id}</h5>
                                         <p>{singleExp.precio}</p>
                                     </section>
-                                        <a href='#'>Reserva ahora</a>
+                                    <BrowserRouter>
+                                        <Link to='/' className='link'>Reserva ahora</Link>
+                                        
+                                        <Routes>
+                                            <Route path='/' />
+                                        </Routes>
+                                    </BrowserRouter>
                                 </TagsExp>
                             </section>
                         </ContainerExp>
