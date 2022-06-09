@@ -181,10 +181,15 @@ export const GridSearch = styled.section`
 export const ContainerImg = styled.section`
     position: relative;
     text-align: center;
+    width: 249px; 
+    height: 381px;
+    margin-bottom: 1em;
+
     &:hover{
         background-color: var(--hover-secondary);
     }
 ` 
+
 export const ImgExp = styled.img`
     width: 249px; 
     height: 381px;
@@ -220,6 +225,20 @@ export const ContainerBtExp = styled.section`
         width: 6em;
     };
 `
+export const FilterExp = styled(FlexRow)`
+    justify-content: center;
+    margin: 2em;
+
+    .link{
+        color: var(--font-color-3);
+        text-decoration: underline 0.1em;
+        text-underline-offset: 0.5em;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+`
 
 /*--- WhoWeAre ---*/
 export const ContainerW= styled(FlexRow)`
@@ -238,8 +257,14 @@ export const InfoW = styled.section`
    
 `
 /*--- Footer ---*/
-export const FooterElements = styled.section`
-    display:flex;
+export const FooterElements = styled(FlexRow)`
     justify-content:center;
-    `
+    background: var(--bg-footer);
+    height: 4em;
+
+    .link{
+        color: var(--font-color-2);
+        text-decoration: none;
+    }   
+`
 

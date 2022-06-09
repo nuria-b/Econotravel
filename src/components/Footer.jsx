@@ -10,9 +10,9 @@ export default function Footer(){
         <footer>
             <BrowserRouter>
                 <FooterElements>
-                    <Link to='/howdoesitwork'>¿Cómo funciona?</Link>
-                    <Link to='/whoweare'>¿Quiénes somos?</Link>
-                    <Link to='/paymentmethods'>Medios de pago</Link>
+                    <Link to='/howdoesitwork' className='link'>¿Cómo funciona?</Link>
+                    <Link to='/whoweare'  className='link'>¿Quiénes somos?</Link>
+                    <Link to='/paymentmethods'  className='link'>Medios de pago</Link>
                 </FooterElements>  
                 
                 <Routes>
