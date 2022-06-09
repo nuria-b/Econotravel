@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     --border: #4B7F55;
     --font-color-1: #4B7F55;
     --font-color-2: white;
+    --font-color-3: black;
     --font-color-pay: red;
     --font-color-l:;
     --bg-page:#ffeabc;

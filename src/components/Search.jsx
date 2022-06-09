@@ -8,14 +8,14 @@ const Etiquetas= ['Ubicacion', 'Transporte', 'Duracion']
 export default function Search (){
     const [info, setInfo] = useState([])
     const [loading, setLoading] = useState(false)
-    
-    useEffect(()=>{
+
+     useEffect(()=>{
         setLoading(true)
-        Getinfo()
-            .then(data =>{ 
-                setInfo(data)
+        Getinfo.getAll()
+        .then(res =>{ 
+                setInfo(res.experiencias)
                 setLoading(false)
-            })
+            }).catch( "Error404")
     }, [])
 
     if (loading) return <section>Cargando...</section>
@@ -28,7 +28,7 @@ export default function Search (){
                     {Etiquetas.map((experienciaMasPopular)=>(
                         <BrowserRouter>
                             <section key={experienciaMasPopular}>
-                                <Link to={`${experienciaMasPopular}`}>{experienciaMasPopular}</Link>
+                                <Link to={`${experienciaMasPopular}`} className='link'>{experienciaMasPopular}</Link>
                             </section>
                             <Routes>
                                 <Route path='/' ></Route>
@@ -39,12 +39,12 @@ export default function Search (){
 
             <GridSearch>      
                 {     
-                    info.map (singleExp => 
+                    info.map ((singleExp, i)=> 
                     
-                            <ContainerExp> 
+                            <ContainerExp key={i}> 
                                 <ContainerImg>
                                     <ImgExp src={singleExp.img}/>
-                                    <TitleExp>{singleExp.titulo}</TitleExp>
+                                    <TitleExp className='titlexp'>{singleExp.titulo}</TitleExp>
                                 </ContainerImg>
 
                                 <section>

@@ -181,10 +181,15 @@ export const GridSearch = styled.section`
 export const ContainerImg = styled.section`
     position: relative;
     text-align: center;
+    width: 249px; 
+    height: 381px;
+    margin-bottom: 1em;
+
     &:hover{
         background-color: var(--hover-secondary);
     }
 ` 
+
 export const ImgExp = styled.img`
     width: 249px; 
     height: 381px;
@@ -223,6 +228,16 @@ export const ContainerBtExp = styled.section`
 export const FilterExp = styled(FlexRow)`
     justify-content: center;
     margin: 2em;
+
+    .link{
+        color: var(--font-color-3);
+        text-decoration: underline 0.1em;
+        text-underline-offset: 0.5em;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
 `
 
 /*--- WhoWeAre ---*/
