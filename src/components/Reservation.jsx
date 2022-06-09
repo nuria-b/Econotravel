@@ -1,4 +1,4 @@
-import FormReservation from "./Reservation/FormReservation.jsx";
+import FormReservation from "./InfoReservation/FormReservation.jsx";
 import logo from '../images/logo.png'
 import { FlexRow } from "./styles/Styles.jsx";
 
