@@ -215,7 +215,7 @@ export const TagsExp = styled(FlexRow)`
 export const ContainerBtExp = styled.section`
     display: flex;
     gap: 0.5em;
-
+    
     button{
         width: 6em;
     };

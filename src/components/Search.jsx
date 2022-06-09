@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Getinfo from '../servicios/Getinfo.jsx';
-import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch } from './styles/Styles.jsx';
+import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, SearchLink } from './styles/Styles.jsx';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 const Etiquetas= ['Ubicacion', 'Transporte', 'Duracion']
