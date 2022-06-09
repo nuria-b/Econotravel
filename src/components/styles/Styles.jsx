@@ -85,6 +85,7 @@ export const SearchBar = styled(FlexRow)`
         height: 3em;
     }
 `
+
 /*--- FormReservation ---*/
 export const FormStyle = styled(FlexColumn)`
     justify-content: center;
@@ -231,11 +232,10 @@ export const FilterExp = styled(FlexRow)`
 
     .link{
         color: var(--font-color-3);
-        text-decoration: underline 0.1em;
-        
 
         &:hover{
             opacity: 0.5;
+            text-decoration: underline 0.1em;
             text-underline-offset: 0.5em;
         }
     }
