@@ -340,18 +340,24 @@ export const FilterExp = styled(FlexRow)`
 /*--- WhoWeAre ---*/
 export const ContainerW= styled(FlexRow)`
     justify-content: center;
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
 `
 
 export const ProfileW = styled(FlexColumn)`
     align-items: center;
-    
+    margin-left: 15em;
     img{
-        width: 15.55em;
+        padding: 1em;
+        width: 20em;
+        margin-top: 5em;
     }
 `
 
 export const InfoW = styled.section`
-   
+   padding: 15em;
+   text-align: justify;
 `
 
 /*--- Footer ---*/
