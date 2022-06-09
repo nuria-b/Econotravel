@@ -221,7 +221,7 @@ export const TagsExp = styled(FlexRow)`
 export const ContainerBtExp = styled.section`
     display: flex;
     gap: 0.5em;
-
+    
     button{
         width: 6em;
     };
@@ -233,10 +233,11 @@ export const FilterExp = styled(FlexRow)`
     .link{
         color: var(--font-color-3);
         text-decoration: underline 0.1em;
-        text-underline-offset: 0.5em;
+        
 
         &:hover{
             opacity: 0.5;
+            text-underline-offset: 0.5em;
         }
     }
 `

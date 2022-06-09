@@ -1,13 +1,9 @@
 import axios from "axios"
 
 const Getinfo= {   
-    async getAll(){    
-       const result = await axios.get ({
-            method: 'GET',
-            url: ' http://localhost:1234/experiencias'
-        })
-        
-        return result.data    
+    async getAll(){  
+       const result = await axios.get (process.env.REACT_APP_API_URL)
+          return result.data    
     }       
 }
 
