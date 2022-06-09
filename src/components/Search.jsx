@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Getinfo from '../servicios/Getinfo.jsx';
 import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp } from './styles/Styles.jsx';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Etiquetas= ['Ubicacion', 'Transporte', 'Duracion']
 
@@ -22,19 +22,14 @@ export default function Search (){
 
     return(
         <>
-                <h1> Experiencias en el área de Barcelona</h1>
+            <h1> Experiencias en el área de Barcelona</h1>
 
             <FilterExp>
                 {Etiquetas.map((experienciaMasPopular)=>(
-                    <BrowserRouter>
-                        <section key={experienciaMasPopular}>
-                            <Link to={`${experienciaMasPopular}`} className='link'>{experienciaMasPopular}</Link>
-                        </section>
-                        <Routes>
-                            <Route path='/' ></Route>
-                        </Routes>
-                    </BrowserRouter>
-                    ))}
+                    <section key={experienciaMasPopular}>
+                        <Link to={`${experienciaMasPopular}`} className='link'>{experienciaMasPopular}</Link>
+                    </section>
+                ))}
             </FilterExp> 
 
             <GridSearch>      
@@ -57,13 +52,8 @@ export default function Search (){
                                         <h5>{singleExp.id}</h5>
                                         <p>{singleExp.precio}</p>
                                     </section>
-                                    <BrowserRouter>
-                                        <Link to='/' className='link'>Reserva ahora</Link>
-                                        
-                                        <Routes>
-                                            <Route path='/' />
-                                        </Routes>
-                                    </BrowserRouter>
+                                    
+                                    <Link to='/' className='link'>Reserva ahora</Link>      
                                 </TagsExp>
                             </section>
                         </ContainerExp>

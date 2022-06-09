@@ -6,7 +6,7 @@ import {FaShoppingBasket} from 'react-icons/fa';
 import {GrFormClose} from 'react-icons/gr';
 import { IconContext } from 'react-icons';
 import { FlexRow, NavStyle, SearchBar } from './styles/Styles.jsx';
-
+import { Link } from "react-router-dom";
 
 export default function NavBar(){
     const [keyword, setKeyword]= useState('')
@@ -22,7 +22,7 @@ export default function NavBar(){
     return(
         <header>
            <NavStyle>
-                <img src={logo} alt='Logo'/>
+                <Link to='/'><img src={logo} alt='Logo'/></Link>
                 
                 <IconContext.Provider value={{ size:'2em', color:'var(--bg-img-nav)' }}>
                     <form onSubmit={ handleSubmit }>

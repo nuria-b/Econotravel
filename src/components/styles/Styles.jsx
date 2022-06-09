@@ -13,6 +13,7 @@ export const FlexColumn = styled.form`
     flex-direction: column;
     gap: 0.2em;
 `
+
 export const Buttons = styled.button`
     background: var(--bg-button);
     border: var(--border);
@@ -72,22 +73,45 @@ export const NavStyle = styled(FlexRow)`
     }
 `
 
-/*--- Homepage ---*/
+export const FormFulfill = styled(FlexRow)`
+    justify-content: space-evenly;
+    height: 100vh;
 
+    p{
+        color: var(--font-color-1);
+        text-decoration: none;
+    }
+
+    .link{
+        color: var(--font-color-1);
+        text-decoration: none;
+        font-weight: bold;
+        align-self: end;
+        
+        &:hover{
+            color: var(--hover-secondary)
+        }
+    }
+`
+
+/*--- Homepage ---*/
 export const HomeStyle = styled(FlexColumn)`
     justify-content: center;
     alingn-content: center;
     align-items: center;
     gap: 5em;
+    
     h2{
         color:  var(--font-color-1);
     }
 `
+
 export const HomeButton = styled(Buttons)`
     text-align: center;
     position: absolute;
     transform: translate(-50%, -50%);
 `
+
 export const Publicidad = styled(HeroImg)`
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
     width: 974px;
@@ -95,15 +119,18 @@ export const Publicidad = styled(HeroImg)`
     top: 4.5em;
     margin-top: 2em;
 `
+
 export const PublicidadButton = styled(HomeButton)`
     top: 50%;
     left: 50%;
 `
+
 export const Oferta= styled(HeroImg)`
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
     width: 910px;
     height: 394px;
 `
+
 export const OfertaText= styled.p`
     text-align: center;
     position: absolute;
@@ -112,6 +139,7 @@ export const OfertaText= styled.p`
     transform: translate(-50%, -50%);
     color: var(--font-color-2)
 `
+
 export const OfertaButton = styled(HomeButton)`
     top: 70%;
     left: 50%;
@@ -142,6 +170,7 @@ export const FormStyle = styled(FlexColumn)`
         flex-direction: row;
     }
 `
+
 export const Form1 = styled(FlexColumn)`
     gap: 1em;
 `
@@ -192,7 +221,6 @@ export const Checkbox = () => (
 )
 
 /*--- Search ---*/
-
 export const GridSearch = styled.section`
     display: grid;
     grid-template-rows: repeat(3, 100%);
@@ -241,6 +269,7 @@ export const ImgExp = styled.img`
     height: 381px;
     opacity: 1;
     transition: opacity .5s;
+
     &:hover {
         opacity: 0.5;
     }
@@ -324,6 +353,7 @@ export const ProfileW = styled(FlexColumn)`
 export const InfoW = styled.section`
    
 `
+
 /*--- Footer ---*/
 export const FooterElements = styled(FlexRow)`
     justify-content:center;
