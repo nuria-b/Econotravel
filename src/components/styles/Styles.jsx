@@ -232,10 +232,11 @@ export const FilterExp = styled(FlexRow)`
     .link{
         color: var(--font-color-3);
         text-decoration: underline 0.1em;
-        text-underline-offset: 0.5em;
+        
 
         &:hover{
             opacity: 0.5;
+            text-underline-offset: 0.5em;
         }
     }
 `
