@@ -341,7 +341,6 @@ export const FilterExp = styled(FlexRow)`
 export const ContainerW= styled(FlexRow)`
     justify-content: center;
     align-items: center;
-    background-color:pink;
     @media (max-width: 1020px) {
         flex-direction: column;
     }
