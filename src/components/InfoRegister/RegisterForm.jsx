@@ -7,19 +7,13 @@ export default function RegisterForm(){
         <Form1>
             <FlexColumn>
                 <LabelForm>Nombre de usuario</LabelForm>
-                <InputForm 
-                id='nombre' 
-                placeholder="Ingrese un nombre" 
-                type="text"/>
+                <InputForm id='nombre' placeholder="Ingrese un nombre" type="text"/>
                 <LabelForm>Texto de ayuda (opcional)</LabelForm>
             </FlexColumn>
 
             <FlexColumn>
                 <LabelForm>Contraseña</LabelForm>
-                <InputForm 
-                id= 'apellidos' 
-                placeholder="Ingrese el/los apellido(s)" 
-                type="password"/>
+                <InputForm id= 'apellidos' placeholder="Ingrese el/los apellido(s)" type="password"/>
                 <LabelForm>Texto de ayuda (opcional)</LabelForm>
             </FlexColumn>
                 <Link to='/' className="link">Register</Link>

@@ -27,12 +27,7 @@ export default function NavBar(){
                 <IconContext.Provider value={{ size:'2em', color:'var(--bg-img-nav)' }}>
                     <form onSubmit={ handleSubmit }>
                         <SearchBar> 
-                                <input 
-                                onChange={ handleFilter }
-                                type='text' 
-                                placeholder='Busca una actividad, un lugar,...' 
-                                id='search'
-                                value={keyword}/>
+                                <input onChange={ handleFilter } type='text' placeholder='Busca una actividad, un lugar,...' id='search' value={keyword}/>
                                 <button htmlFor='search'>
                                     {!keyword.length ? <BiSearchAlt /> : <GrFormClose/>}
                                 </button>   
