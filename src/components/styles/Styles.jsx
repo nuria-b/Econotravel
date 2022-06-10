@@ -340,7 +340,9 @@ export const FilterExp = styled(FlexRow)`
 /*--- WhoWeAre ---*/
 export const ContainerW= styled(FlexRow)`
     justify-content: center;
-    @media (max-width: 700px) {
+    align-items: center;
+    background-color:pink;
+    @media (max-width: 1020px) {
         flex-direction: column;
     }
 `
@@ -353,11 +355,18 @@ export const ProfileW = styled(FlexColumn)`
         width: 20em;
         margin-top: 5em;
     }
+    @media (max-width: 1020px){
+        margin-left: 0em;
+    }
 `
 
 export const InfoW = styled.section`
-   padding: 15em;
+    padding: 14em;
    text-align: justify;
+   @media (max-width: 1020px){
+    margin-top: -4em;
+    padding: 4em;
+}
 `
 
 /*--- Footer ---*/
