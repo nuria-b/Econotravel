@@ -61,9 +61,11 @@ export const NavStyle = styled(FlexRow)`
     background: var(--bg-nav);
     //position: fixed;
     width: 100%;
+    height: 5em;
+    z-index: 2;
 
     img{
-        height: 10em;
+        height: 4em;
     }
 
     button{
