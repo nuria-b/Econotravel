@@ -46,7 +46,7 @@ export const HeroImg = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: 1;
+    z-index: 1; 
 `
 
 export const TextHero = styled.p`
@@ -113,7 +113,8 @@ export const HomeButton = styled(Buttons)`
 `
 
 export const Publicidad = styled(HeroImg)`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1622228194263-b3369caf4ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+    ");
     width: 974px;
     height: 543px;
     top: 4.5em;
@@ -125,8 +126,23 @@ export const PublicidadButton = styled(HomeButton)`
     left: 50%;
 `
 
+export const ContainerTravel= styled.section`
+    display: flex;
+    margin-top: 5em;
+    margin-left: 2em;
+`
+
+export const ImgTravel= styled.img`
+    width: 345px;
+    height: 394px;
+`
+
+export const TxtTravel= styled.section`
+    margin-left: 2em;
+`
+
 export const Oferta= styled(HeroImg)`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1482356432770-3a99f07aba35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
     width: 910px;
     height: 394px;
 `
