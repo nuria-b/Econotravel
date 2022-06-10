@@ -40,7 +40,7 @@ export default function NavBar(){
                     </form>
 
                     <FlexRow>
-                        <button><GiGorilla /></button>
+                        <Link to='/login'><button><GiGorilla /></button></Link>
                         <button><FaShoppingBasket /></button>
                     </FlexRow>
                 </IconContext.Provider>

@@ -1,7 +1,6 @@
 import React from "react";
 import { FlexColumn, InputForm, LabelForm, Form1 } from "../styles/Styles";
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
-import Login from "../Login";
+import { Link } from "react-router-dom";
 
 export default function RegisterForm(){
     return(
@@ -23,16 +22,9 @@ export default function RegisterForm(){
                 type="password"/>
                 <LabelForm>Texto de ayuda (opcional)</LabelForm>
             </FlexColumn>
-
-            <BrowserRouter>
                 <Link to='/' className="link">Register</Link>
 
                 <p>Haz click <Link to='/login' className="link">aquí</Link>, si ya te has resgistrado</p>
-
-                <Routes>
-                    <Route path='/login'  element={<Login />}></Route>
-                </Routes>
-            </BrowserRouter>
         </Form1>
     )
 }
