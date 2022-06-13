@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Getinfo from '../servicios/Getinfo.jsx';
 import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp } from './styles/Styles.jsx';
 import { Link } from 'react-router-dom';
+import Dropdown from './Dropdown.jsx';
 
 const Etiquetas= ['Ubicacion', 'Transporte', 'Duracion']
+const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']},{titulo:'Transporte', valores:['Bicicleta','A pie','Barco']},{titulo:'Duración', valores:['Excursión corta','Excursión larga']}]
 
 export default function Search (){
     const [info, setInfo] = useState([])
@@ -25,9 +27,9 @@ export default function Search (){
             <h1> Experiencias en el área de Barcelona</h1>
 
             <FilterExp>
-                {Etiquetas.map((experienciaMasPopular)=>(
-                    <section key={experienciaMasPopular}>
-                        <Link to={`${experienciaMasPopular}`} className='link'>{experienciaMasPopular}</Link>
+                {Desplegables.map((desplegableEtiqueta)=>(
+                    <section key={desplegableEtiqueta.titulo}>
+                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))}/>
                     </section>
                 ))}
             </FilterExp> 
