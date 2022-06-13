@@ -7,21 +7,28 @@ export default function RegisterForm(){
         <Form1>
             <FlexColumn>
                 <LabelForm>Nombre de usuario</LabelForm>
-                <InputForm 
-                id='nombre' 
-                placeholder="Ingrese un nombre" 
-                type="text"/>
+                <InputForm id='nombre' placeholder="Ingrese un nombre" type="text"/>
+                <LabelForm>Texto de ayuda (opcional)</LabelForm>
+            </FlexColumn>
+
+            <FlexColumn>
+                <LabelForm>Correo electrónico</LabelForm>
+                <InputForm id='email' placeholder="Ingrese un correo electrónico" type="email"/>
                 <LabelForm>Texto de ayuda (opcional)</LabelForm>
             </FlexColumn>
 
             <FlexColumn>
                 <LabelForm>Contraseña</LabelForm>
-                <InputForm 
-                id= 'apellidos' 
-                placeholder="Ingrese el/los apellido(s)" 
-                type="password"/>
+                <InputForm id= 'contraseña' placeholder="Ingrese una contraseña" type="password"/>
                 <LabelForm>Texto de ayuda (opcional)</LabelForm>
             </FlexColumn>
+            
+            <FlexColumn>
+                <LabelForm>Confirme su contraseña</LabelForm>
+                <InputForm id= 'chequearcontraseña' placeholder="Ingrese nuevamente su contraseña" type="password"/>
+                <LabelForm>Texto de ayuda (opcional)</LabelForm>
+            </FlexColumn> 
+
                 <Link to='/' className="link">Register</Link>
 
                 <p>Haz click <Link to='/login' className="link">aquí</Link>, si ya te has resgistrado</p>
