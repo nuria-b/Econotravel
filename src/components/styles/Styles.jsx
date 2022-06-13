@@ -99,7 +99,7 @@ export const FormFulfill = styled(FlexRow)`
 /*--- Homepage ---*/
 export const HomeStyle = styled(FlexColumn)`
     justify-content: center;
-    alingn-content: center;
+    align-content: center;
     align-items: center;
     gap: 5em;
     
@@ -115,8 +115,7 @@ export const HomeButton = styled(Buttons)`
 `
 
 export const Publicidad = styled(HeroImg)`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1622228194263-b3369caf4ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
-    ");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1622228194263-b3369caf4ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     width: 974px;
     height: 543px;
     top: 4.5em;
@@ -180,7 +179,7 @@ export const SearchBar = styled(FlexRow)`
 /*--- FormReservation ---*/
 export const FormStyle = styled(FlexColumn)`
     justify-content: center;
-    alingn-content: center;
+    align-content: center;
     align-items: center;
     gap: 5em;
     
@@ -334,10 +333,16 @@ export const ContainerBtExp = styled.section`
     button{
         width: 6em;
         border-radius: 2em;
-        border: 0.1em solid var(--border);;
+        border: 0.1em solid var(--font-color-1);
         background: white;
-        color: var(--font-color-1)
+        color: var(--font-color-1);
     };
+
+    button.selectedButton{
+        border: 0.2em solid var(--font-color-read);;
+        color: var(--font-color-read);
+        font-weight: bold;
+    }
 `
 export const FilterExp = styled(FlexRow)`
     justify-content: center;
@@ -353,6 +358,9 @@ export const FilterExp = styled(FlexRow)`
             text-underline-offset: 0.5em;
         }
     }
+`
+export const DropdownStyle = styled.select `
+    display:none;
 `
 
 /*--- WhoWeAre ---*/

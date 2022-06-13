@@ -4,7 +4,6 @@ import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, 
 import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown.jsx';
 
-const Etiquetas= ['Ubicacion', 'Transporte', 'Duracion']
 const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']},{titulo:'Transporte', valores:['Bicicleta','A pie','Barco']},{titulo:'Duración', valores:['Excursión corta','Excursión larga']}]
 
 export default function Search (){
@@ -20,6 +19,20 @@ export default function Search (){
             })
     }, [])
 
+    const [etiquetaActiva,setEtiquetaActiva] = useState('')
+
+    const HandleClick = (ev)=> {
+        if(ev.target.id === 'span-Ubicación'){
+            setEtiquetaActiva('Ubicación')
+        }
+        if(ev.target.id === 'span-Transporte'){
+            setEtiquetaActiva('Transporte')
+        }
+        if(ev.target.id === 'span-Duración'){
+            setEtiquetaActiva('Duración')
+        }
+      }
+    
     if (loading) return <section>Cargando...</section>
 
     return(
@@ -29,7 +42,7 @@ export default function Search (){
             <FilterExp>
                 {Desplegables.map((desplegableEtiqueta)=>(
                     <section key={desplegableEtiqueta.titulo}>
-                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))}/>
+                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} onClick={HandleClick} style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline':''}} />
                     </section>
                 ))}
             </FilterExp> 
@@ -45,9 +58,9 @@ export default function Search (){
                             
                             <section>
                                 <ContainerBtExp>
-                                    <button>{singleExp.Ubicacion}</button>
-                                    <button>{singleExp.Transporte}</button>
-                                    <button>{singleExp.Duracion}</button>
+                                    <button className={etiquetaActiva==='Ubicación'?'selectedButton':''}>{singleExp.Ubicacion}</button>
+                                    <button className={etiquetaActiva==='Transporte'?'selectedButton':''}>{singleExp.Transporte}</button>
+                                    <button className={etiquetaActiva==='Duración'?'selectedButton':''}>{singleExp.Duracion}</button>
                                 </ContainerBtExp>
                                 <TagsExp>
                                     <section>

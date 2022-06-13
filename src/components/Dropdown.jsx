@@ -1,13 +1,14 @@
+import {DropdownStyle} from './styles/Styles.jsx';
 
-export default function Dropdown ({ label, options, onChange }) {
+export default function Dropdown ({ label, options, onChange, onClick, style }) {
     return (
       <label>
-        {label}
-        <select onChange={onChange}>
+        <span id={`span-${label}`} onClick={onClick} style={style}>{label}</span>
+        <DropdownStyle onChange={onChange}>
           {options.map((option) => (
             <option value={option.value}>{option.label}</option>
           ))}
-        </select>
+        </DropdownStyle>
       </label>
     );
   };

@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
     --font-color-2: white;
     --font-color-3: black;
     --font-color-pay: red;
-    --font-color-l:;
     --bg-page:#ffeabc;
     --bg-nav:;
     --bg-input-search: white;
