@@ -336,10 +336,16 @@ export const ContainerBtExp = styled.section`
     button{
         width: 6em;
         border-radius: 2em;
-        border: 0.1em solid var(--border);;
+        border: 0.1em solid var(--font-color-1);
         background: white;
-        color: var(--font-color-1)
+        color: var(--font-color-1);
     };
+
+    button.selectedButton{
+        border: 0.2em solid var(--font-color-read);;
+        color: var(--font-color-read);
+        font-weight: bold;
+    }
 `
 
 export const FilterExp = styled(FlexRow)`
@@ -356,6 +362,9 @@ export const FilterExp = styled(FlexRow)`
             text-underline-offset: 0.5em;
         }
     }
+`
+export const DropdownStyle = styled.select `
+    display:none;
 `
 
 /*--- Details ---*/
