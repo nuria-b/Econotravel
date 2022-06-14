@@ -15,7 +15,7 @@ export default function Router() {
                 <Routes>
                     <Route exact path='/' element={<HomePage />}/>
                     <Route exact path='/search' element={<Search />}></Route>
-                    <Route exact path='/detail/:id' element={<Details />}/>
+                    <Route exact path='/:id/detail' element={<Details />}/>
                     <Route exact path='/login' element={<Login />}/>
                     <Route exact path='/register' element={<Register />}/>
                     <Route exact path='/reservation' element={<Reservation />}/>

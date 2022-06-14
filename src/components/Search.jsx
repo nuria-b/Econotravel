@@ -51,7 +51,7 @@ export default function Search (){
                 {     
                     info.map ((singleExp, i)=> 
                         <ContainerExp key={i}>
-                            <Link to={`/detail/${i}`}> 
+                            <Link to={`/${i}/detail`} state={{etiquetaActiva}}> 
                                 <ContainerImg>
                                     <ImgExp src={singleExp.img} alt={singleExp.titulo}/>
                                     <TitleExp className='titlexp'>{singleExp.titulo}</TitleExp>
