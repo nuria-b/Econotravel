@@ -1,5 +1,5 @@
 import React from "react";
-import {Buttons, FlexColumn, FlexRow, Form1, Form2, FormStyle, Checkbox, InputForm, LabelCheck, LabelForm } from "../styles/Styles.jsx";
+import {Buttons, FlexColumn, FlexRow, Form1, FormReserP2, FormStyle, Checkbox, InputForm, LabelCheck, LabelForm } from "../styles/Styles.jsx";
 
 export default function FormReservation(){
     return (
@@ -8,62 +8,44 @@ export default function FormReservation(){
                 <FlexRow>
                     <FlexColumn>
                         <LabelForm>Nombre</LabelForm>
-                        <InputForm 
-                        id='nombre' 
-                        placeholder="Ingrese un nombre" 
-                        type="text"/>
+                        <InputForm id='nombre' placeholder="Ingrese un nombre" type="text"/>
                         <LabelForm>Texto de ayuda (opcional)</LabelForm>
                     </FlexColumn>
 
                     <FlexColumn>
                         <LabelForm>Apellidos</LabelForm>
-                        <InputForm 
-                        id= 'apellidos' 
-                        placeholder="Ingrese el/los apellido(s)" 
-                        type="text"/>
+                        <InputForm id= 'apellidos' placeholder="Ingrese el/los apellido(s)" type="text"/>
                         <LabelForm>Texto de ayuda (opcional)</LabelForm>
                     </FlexColumn>
                 </FlexRow>
 
                 <FlexColumn>
                     <LabelForm>Dirección</LabelForm>
-                    <InputForm
-                    id= 'direccion'  
-                    placeholder="Ingrese una dirreción" 
-                    type="text"/>
+                    <InputForm id= 'direccion' placeholder="Ingrese una dirreción" type="text"/>
                     <LabelForm>Texto de ayuda (opcional)</LabelForm>
                 </FlexColumn>
 
                 <FlexRow>
                     <FlexColumn>
                         <LabelForm>Correo electrónico</LabelForm>
-                        <InputForm 
-                        id= 'email'
-                        placeholder="Ingrese un correo electrónico" 
-                        type="email"/> 
+                        <InputForm id= 'email' placeholder="Ingrese un correo electrónico" type="email"/> 
                         <LabelForm>Texto de ayuda (opcional)</LabelForm>
                     </FlexColumn>
 
                     <FlexColumn>
                         <LabelForm>Teléfono</LabelForm>
-                        <InputForm 
-                        id='telefono'  
-                        placeholder="Ingrese un número de teléfono" 
-                        type="text"/>
+                        <InputForm id='telefono'  placeholder="Ingrese un número de teléfono" type="text"/>
                         <LabelForm>Texto de ayuda (opcional)</LabelForm>
                     </FlexColumn>
                 </FlexRow> 
 
                 <FlexColumn>
                     <LabelForm>Fecha</LabelForm>
-                    <InputForm 
-                    id='fecha'
-                    placerholder="Fecha" 
-                    type="date"/>
+                    <InputForm id='fecha' placerholder="Fecha" type="date"/>
                 </FlexColumn>
             </Form1>
 
-            <Form2>
+            <FormReserP2>
                 <h2>250€</h2>
                 <h3>Experiencia reservada: {}</h3>
                 <p>Cant: {}</p>
@@ -75,7 +57,7 @@ export default function FormReservation(){
                     <LabelCheck><Checkbox type="checkbox" checked/>Colaboradores de calidad</LabelCheck> 
                     <LabelCheck><Checkbox type="checkbox" checked/>Pago 100% seguro</LabelCheck>
                 </FlexColumn> 
-            </Form2>
+            </FormReserP2>
         </FormStyle>
     )
 }

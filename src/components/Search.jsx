@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Getinfo from '../servicios/Getinfo.jsx';
 import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp } from './styles/Styles.jsx';
 import { Link } from 'react-router-dom';
+import Dropdown from './Dropdown.jsx';
 
-const Etiquetas= ['Ubicacion', 'Transporte', 'Duracion']
+const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']},{titulo:'Transporte', valores:['Bicicleta','A pie','Barco']},{titulo:'Duración', valores:['Excursión corta','Excursión larga']}]
 
 export default function Search (){
     const [info, setInfo] = useState([])
@@ -18,6 +19,20 @@ export default function Search (){
             })
     }, [])
 
+    const [etiquetaActiva,setEtiquetaActiva] = useState('')
+
+    const HandleClick = (ev)=> {
+        if(ev.target.id === 'span-Ubicación'){
+            setEtiquetaActiva('Ubicación')
+        }
+        if(ev.target.id === 'span-Transporte'){
+            setEtiquetaActiva('Transporte')
+        }
+        if(ev.target.id === 'span-Duración'){
+            setEtiquetaActiva('Duración')
+        }
+      }
+    
     if (loading) return <section>Cargando...</section>
 
     return(
@@ -25,9 +40,9 @@ export default function Search (){
             <h1> Experiencias en el área de Barcelona</h1>
 
             <FilterExp>
-                {Etiquetas.map((experienciaMasPopular)=>(
-                    <section key={experienciaMasPopular}>
-                        <Link to={`${experienciaMasPopular}`} className='link'>{experienciaMasPopular}</Link>
+                {Desplegables.map((desplegableEtiqueta)=>(
+                    <section key={desplegableEtiqueta.titulo}>
+                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} onClick={HandleClick} style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline':''}} />
                     </section>
                 ))}
             </FilterExp> 
@@ -35,17 +50,19 @@ export default function Search (){
             <GridSearch>      
                 {     
                     info.map ((singleExp, i)=> 
-                        <ContainerExp key={i}> 
-                            <ContainerImg>
-                                <ImgExp src={singleExp.img} alt={singleExp.titulo}/>
-                                <TitleExp className='titlexp'>{singleExp.titulo}</TitleExp>
-                            </ContainerImg>
+                        <ContainerExp key={i}>
+                            <Link to={`/detail/${i}`}> 
+                                <ContainerImg>
+                                    <ImgExp src={singleExp.img} alt={singleExp.titulo}/>
+                                    <TitleExp className='titlexp'>{singleExp.titulo}</TitleExp>
+                                </ContainerImg>
+                            </Link>
                             
                             <section>
                                 <ContainerBtExp>
-                                    <button>{singleExp.Ubicacion}</button>
-                                    <button>{singleExp.Transporte}</button>
-                                    <button>{singleExp.Duracion}</button>
+                                    <button className={etiquetaActiva==='Ubicación'?'selectedButton':''}>{singleExp.Ubicacion}</button>
+                                    <button className={etiquetaActiva==='Transporte'?'selectedButton':''}>{singleExp.Transporte}</button>
+                                    <button className={etiquetaActiva==='Duración'?'selectedButton':''}>{singleExp.Duracion}</button>
                                 </ContainerBtExp>
                                 <TagsExp>
                                     <section>
