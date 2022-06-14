@@ -35,11 +35,13 @@ export default function Search (){
             <GridSearch>      
                 {     
                     info.map ((singleExp, i)=> 
-                        <ContainerExp key={i}> 
-                            <ContainerImg>
-                                <ImgExp src={singleExp.img} alt={singleExp.titulo}/>
-                                <TitleExp className='titlexp'>{singleExp.titulo}</TitleExp>
-                            </ContainerImg>
+                        <ContainerExp key={i}>
+                            <Link to={`/detail/${i}`}> 
+                                <ContainerImg>
+                                    <ImgExp src={singleExp.img} alt={singleExp.titulo}/>
+                                    <TitleExp className='titlexp'>{singleExp.titulo}</TitleExp>
+                                </ContainerImg>
+                            </Link>
                             
                             <section>
                                 <ContainerBtExp>

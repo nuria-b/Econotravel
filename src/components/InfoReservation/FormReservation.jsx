@@ -1,5 +1,5 @@
 import React from "react";
-import {Buttons, FlexColumn, FlexRow, Form1, Form2, FormStyle, Checkbox, InputForm, LabelCheck, LabelForm } from "../styles/Styles.jsx";
+import {Buttons, FlexColumn, FlexRow, Form1, FormReserP2, FormStyle, Checkbox, InputForm, LabelCheck, LabelForm } from "../styles/Styles.jsx";
 
 export default function FormReservation(){
     return (
@@ -45,7 +45,7 @@ export default function FormReservation(){
                 </FlexColumn>
             </Form1>
 
-            <Form2>
+            <FormReserP2>
                 <h2>250€</h2>
                 <h3>Experiencia reservada: {}</h3>
                 <p>Cant: {}</p>
@@ -57,7 +57,7 @@ export default function FormReservation(){
                     <LabelCheck><Checkbox type="checkbox" checked/>Colaboradores de calidad</LabelCheck> 
                     <LabelCheck><Checkbox type="checkbox" checked/>Pago 100% seguro</LabelCheck>
                 </FlexColumn> 
-            </Form2>
+            </FormReserP2>
         </FormStyle>
     )
 }

@@ -55,6 +55,15 @@ export const TextHero = styled.p`
     transform: translate(-50%, -50%);
 `
 
+export const Form1 = styled(FlexColumn)`
+    gap: 1em;
+`
+
+export const Form2 = styled(FlexColumn)`
+    border: 0.1em solid var(--border); 
+    padding: 2em;
+`
+
 /*--- Navbar ---*/
 export const NavStyle = styled(FlexRow)`
     justify-content: space-evenly;
@@ -99,7 +108,7 @@ export const FormFulfill = styled(FlexRow)`
 /*--- Homepage ---*/
 export const HomeStyle = styled(FlexColumn)`
     justify-content: center;
-    alingn-content: center;
+    align-content: center;
     align-items: center;
     gap: 5em;
     
@@ -115,8 +124,7 @@ export const HomeButton = styled(Buttons)`
 `
 
 export const Publicidad = styled(HeroImg)`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1622228194263-b3369caf4ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
-    ");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1622228194263-b3369caf4ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     width: 974px;
     height: 543px;
     top: 4.5em;
@@ -180,7 +188,7 @@ export const SearchBar = styled(FlexRow)`
 /*--- FormReservation ---*/
 export const FormStyle = styled(FlexColumn)`
     justify-content: center;
-    alingn-content: center;
+    align-content: center;
     align-items: center;
     gap: 5em;
     
@@ -189,14 +197,8 @@ export const FormStyle = styled(FlexColumn)`
     }
 `
 
-export const Form1 = styled(FlexColumn)`
-    gap: 1em;
-`
-
-export const Form2 = styled(FlexColumn)`
-    border: 0.1em solid var(--border); 
-    padding: 2em;
-    width: 20em;
+export const FormReserP2= styled(Form2)`
+width: 20em;
 
     h2{
         color: var(--font-color-pay);
@@ -339,6 +341,7 @@ export const ContainerBtExp = styled.section`
         color: var(--font-color-1)
     };
 `
+
 export const FilterExp = styled(FlexRow)`
     justify-content: center;
     margin: 2em;
@@ -355,10 +358,76 @@ export const FilterExp = styled(FlexRow)`
     }
 `
 
+/*--- Details ---*/
+export const Breadcrumbs = styled.ul`
+    list-style: none;
+    padding: 0;
+
+    & > li:after {
+        content: "${props => props.separator || ">"}";
+        padding: 0 0.5em;
+    }
+`
+
+export const Crumb = styled.li`
+    display: inline-block;
+
+    &:last-of-type:after {
+        content: "";
+    }
+
+    a {
+        color: var(--font-color-1);
+        text-decoration: none;
+        
+        &:hover {
+        text-decoration: underline;
+        }
+    }
+`
+
+export const ImgDetail= styled.img`
+    width: 442px;
+    height: 284px;
+`
+
+export  const DetailReser = styled(Form2)`
+    justify-content: center;
+    width: 16em;
+    height: 20em;
+    
+    h2{
+        color: var(--font-color-1)
+    }
+
+    input{
+        width: 3.5em;
+    }
+`
+
+export const InfoDetail = styled(FlexRow)`
+    justify-content: space-around;
+
+    @media screen and (max-width: 1200px){
+        flex-direction: column;
+    }
+`
+
+export const ReadMoreDetail = styled.span`
+    color: var(--font-color-1);
+    cursor: pointer;
+`
+
+export const ContainerDetail = styled.section`
+    padding: 5em;
+    min-height: 80.5vh;
+`
+
 /*--- WhoWeAre ---*/
 export const ContainerW= styled(FlexRow)`
     justify-content: center;
     align-items: center;
+
     @media (max-width: 1020px) {
         flex-direction: column;
     }
@@ -367,11 +436,13 @@ export const ContainerW= styled(FlexRow)`
 export const ProfileW = styled(FlexColumn)`
     align-items: center;
     margin-left: 15em;
+
     img{
         padding: 1em;
         width: 20em;
         margin-top: 5em;
     }
+
     @media (max-width: 1020px){
         margin-left: 0em;
     }
@@ -379,11 +450,12 @@ export const ProfileW = styled(FlexColumn)`
 
 export const InfoW = styled.section`
     padding: 14em;
-   text-align: justify;
-   @media (max-width: 1020px){
-    margin-top: -4em;
-    padding: 4em;
-}
+    text-align: justify;
+
+     @media (max-width: 1020px){
+        argin-top: -4em;
+        padding: 4em;
+    }
 `
 
 /*--- Footer ---*/
