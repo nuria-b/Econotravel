@@ -2,6 +2,7 @@ import React from "react";
 import { HomeStyle, Publicidad, PublicidadButton, Oferta, OfertaButton, OfertaText, Buttons, ImgTravel, ContainerTravel, TxtTravel } from "./styles/Styles";
 import { Link } from "react-router-dom";
 import Travel from '../images/travel.avif';
+import Experiences from "./Experiences";
 
 export default function HomePage(){
     return(
@@ -9,6 +10,7 @@ export default function HomePage(){
             <Publicidad>
                 <Link to='/search'><PublicidadButton>Descubre más</PublicidadButton></Link>
             </Publicidad>
+            <Experiences />
             <ContainerTravel>
                 <ImgTravel src={Travel}/>
                 <TxtTravel>
