@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Getinfo from '../servicios/Getinfo.jsx';
-import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp } from './styles/Styles.jsx';
+import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp, ThreeExperiencesSection } from './styles/Styles.jsx';
 import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown.jsx';
 
@@ -38,7 +38,7 @@ const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']}
     if (loading) return <section>Cargando...</section>
 
     return(
-        <>
+        <ThreeExperiencesSection>
             <h1> Experiencias en el área de Barcelona</h1>
 
             <FilterExp>
@@ -79,6 +79,7 @@ const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']}
                     )
                 } 
             </GridSearch>
-        </>
+            <button className='moreButton'><Link to='/search'>Ver más</Link></button>
+        </ThreeExperiencesSection>
     )
 }

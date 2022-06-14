@@ -122,6 +122,20 @@ export const HomeButton = styled(Buttons)`
     position: absolute;
     transform: translate(-50%, -50%);
 `
+export const ThreeExperiencesSection = styled.section `
+    margin-top: 4em;
+    h1 {
+        text-align: center;
+    }
+    .moreButton {
+        margin-bottom:4em;
+        margin-left: 22em;
+        width: 9em;
+        font-size: 1.2em;
+        text-decoration:none !important;
+    }
+
+`
 
 export const Publicidad = styled(HeroImg)`
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1622228194263-b3369caf4ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
@@ -243,7 +257,6 @@ export const Checkbox = () => (
 /*--- Search ---*/
 export const GridSearch = styled.section`
     display: grid;
-    grid-template-rows: repeat(3, 100%);
     grid-template-columns: repeat(3, 15em);
     justify-content: center;
     align-items: center;
@@ -254,6 +267,7 @@ export const GridSearch = styled.section`
     margin-bottom: 2em;
     margin-left: 4em;
     margin-right: 4em;
+
     
     @media (max-width: 1200px) {
         &{
