@@ -1,8 +1,8 @@
 import React from "react";
-import { HomeStyle, Publicidad, PublicidadButton, Oferta, OfertaButton, OfertaText, Buttons, ImgTravel, ContainerTravel, TxtTravel } from "./styles/Styles";
+import { HomeStyle, Publicidad, PublicidadButton, Oferta, OfertaButton, OfertaText, Buttons, ImgTravel, ContainerTravel, TxtTravel } from "../components/styles/Styles";
 import { Link } from "react-router-dom";
 import Travel from '../images/travel.avif';
-import Experiences from "./Experiences";
+import Experiences from "../components/HomePage/Experiences.jsx";
 
 export default function HomePage(){
     return(

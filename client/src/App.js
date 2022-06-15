@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import NavBar from './components/NavBar.jsx';
+import NavBar from './Pages/NavBar.jsx';
 import GlobalStyle from './globalStyles.jsx';
-import Footer from './components/Footer.jsx';
+import Footer from './Pages/Footer.jsx';
 import Router from './Router.jsx';
 import { BrowserRouter } from "react-router-dom";
 

@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./components/HomePage";
-import Search from "./components/Search.jsx";
-import Reservation from "./components/Reservation.jsx";
-import Register from "./components/Register";
-import Login from "./components/Login.jsx";
-import WhoWeAre from './components/InfoFooter/WhoWeAre.jsx';
-import HowDoesItWork from './components/InfoFooter/HowDoesItWork.jsx';
-import PaymentMethods from './components/InfoFooter/PaymentMethods.jsx';
-import Details from "./components/Details";
+import HomePage from "./Pages/HomePage";
+import Search from "./Pages/Search.jsx";
+import Reservation from "./Pages/Reservation.jsx";
+import Register from "./Pages/Register";
+import Login from "./Pages/Login.jsx";
+import WhoWeAre from './components/Footer/WhoWeAre.jsx';
+import HowDoesItWork from './components/Footer/HowDoesItWork.jsx';
+import PaymentMethods from './components/Footer/PaymentMethods.jsx';
+import Details from "./Pages/Details";
 
 export default function Router() {
     return(

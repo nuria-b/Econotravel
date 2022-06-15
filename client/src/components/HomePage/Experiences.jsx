@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import Getinfo from '../servicios/Getinfo.jsx';
-import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp } from './styles/Styles.jsx';
+import Getinfo from '../../servicios/Getinfo.jsx';
+import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp, ThreeExperiencesSection } from '../styles/Styles.jsx';
 import { Link } from 'react-router-dom';
-import Dropdown from './Dropdown.jsx';
+import Dropdown from '../Dropdown.jsx';
+
+export default function Experiences () {
 
 const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']},{titulo:'Transporte', valores:['Bicicleta','A pie','Barco']},{titulo:'Duración', valores:['Excursión corta','Excursión larga']}]
 
-export default function Search (){
+
     const [info, setInfo] = useState([])
     const [loading, setLoading] = useState(false)
 
@@ -14,7 +16,7 @@ export default function Search (){
         setLoading(true)
         Getinfo.getAll()
         .then(res =>{ 
-                setInfo(res)
+                setInfo(res.slice(0,3))
                 setLoading(false)
             })
     }, [])
@@ -36,7 +38,7 @@ export default function Search (){
     if (loading) return <section>Cargando...</section>
 
     return(
-        <>
+        <ThreeExperiencesSection>
             <h1> Experiencias en el área de Barcelona</h1>
 
             <FilterExp>
@@ -77,6 +79,7 @@ export default function Search (){
                     )
                 } 
             </GridSearch>
-        </>
+            <button className='moreButton'><Link to='/search'>Ver más</Link></button>
+        </ThreeExperiencesSection>
     )
 }

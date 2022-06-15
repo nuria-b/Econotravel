@@ -1,14 +1,15 @@
 import logo from '../images/logo.png'
-import  LoginForm from './InfoLogin/LoginForm.jsx'
-import { FormFulfill } from './styles/Styles'
+import RegisterForm from '../components/Register/RegisterForm.jsx'
+import { FormFulfill } from '../components/styles/Styles'
 import { Link } from 'react-router-dom';
 
-export default function Login(){
+
+export default function Register(){
     return(
         <FormFulfill>
                 <Link to='/'><img src={logo} alt="Logo"/></Link>
 
-                <LoginForm/>
+                <RegisterForm/>
         </FormFulfill>
     )
 }

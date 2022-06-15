@@ -1,6 +1,6 @@
-import FormReservation from "./InfoReservation/FormReservation.jsx";
+import FormReservation from "../components/Reservation/FormReservation.jsx";
 import logo from '../images/logo.png'
-import { FlexRow } from "./styles/Styles.jsx";
+import { FlexRow } from "../components/styles/Styles.jsx";
 
 export default function Reservation (){
     return(

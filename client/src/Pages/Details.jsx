@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Link, useParams, useLocation } from "react-router-dom"
-import { ReadMore } from "./Detail/ReadMore.jsx"
-import { Breadcrumbs, Buttons, Crumb, FlexColumn, InfoDetail, DetailReser, ImgDetail, ContainerDetail } from "./styles/Styles.jsx"
+import { ReadMore } from "../components/Detail/ReadMore.jsx"
+import { Breadcrumbs, Buttons, Crumb, FlexColumn, InfoDetail, DetailReser, ImgDetail, ContainerDetail } from "../components/styles/Styles.jsx"
 import Getinfo from '../servicios/Getinfo.jsx';
 
 export default function Detail() {

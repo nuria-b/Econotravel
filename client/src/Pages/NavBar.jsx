@@ -5,7 +5,7 @@ import {BiSearchAlt} from 'react-icons/bi';
 import {FaShoppingBasket} from 'react-icons/fa';
 import {GrFormClose} from 'react-icons/gr';
 import { IconContext } from 'react-icons';
-import { FlexRow, NavStyle, SearchBar } from './styles/Styles.jsx';
+import { FlexRow, NavStyle, SearchBar } from '../components/styles/Styles.jsx';
 import { Link } from "react-router-dom";
 
 export default function NavBar(){
