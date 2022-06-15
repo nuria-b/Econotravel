@@ -68,7 +68,7 @@ export const Form2 = styled(FlexColumn)`
 export const NavStyle = styled(FlexRow)`
     justify-content: space-evenly;
     background: var(--bg-nav);
-    //position: fixed;
+    position: fixed;
     width: 100%;
     height: 5em;
     z-index: 2;
@@ -110,7 +110,7 @@ export const HomeStyle = styled(FlexColumn)`
     justify-content: center;
     align-content: center;
     align-items: center;
-    gap: 5em;
+    gap: 2em;
     
     h2{
         color:  var(--font-color-1);
@@ -125,21 +125,25 @@ export const HomeButton = styled(Buttons)`
 
 export const ThreeExperiencesSection = styled.section `
     margin-top: 4em;
+    
     h1 {
         text-align: center;
     }
-    .moreButton {
-        margin-bottom:4em;
-        margin-left: 22em;
-        width: 9em;
-        font-size: 1.2em;
-        text-decoration:none !important;
-    }
 
+    .moreButton {
+        margin-left: 37.5%;
+        font-size: 1.2em;
+        margin-bottom: 0;
+
+        .link{
+            color: var(--font-color-2);
+            text-decoration: none;
+        }
+    }
 `
 
 export const Publicidad = styled(HeroImg)`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1622228194263-b3369caf4ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1622228194263-b3369caf4ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     width: 974px;
     height: 543px;
     top: 4.5em;
@@ -151,8 +155,9 @@ export const PublicidadButton = styled(HomeButton)`
     left: 50%;
 `
 
-export const ContainerTravel= styled.section`
-    display: flex;
+export const ContainerTravel= styled(FlexRow)`
+    justify-content: center;
+    gap: 2em;
     margin-top: 5em;
     margin-left: 2em;
 `
@@ -163,13 +168,15 @@ export const ImgTravel= styled.img`
 `
 
 export const TxtTravel= styled.section`
-    margin-left: 2em;
+    width: 35em;
+    text-align: justify;
 `
 
 export const Oferta= styled(HeroImg)`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1482356432770-3a99f07aba35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1482356432770-3a99f07aba35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
     width: 910px;
     height: 394px;
+    margin: 2em 0 4em 0;
 `
 
 export const OfertaText= styled.p`

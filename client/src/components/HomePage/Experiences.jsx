@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Getinfo from '../../servicios/Getinfo.jsx';
-import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp, ThreeExperiencesSection } from '../styles/Styles.jsx';
+import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp, ThreeExperiencesSection, Buttons } from '../styles/Styles.jsx';
 import { Link } from 'react-router-dom';
 import Dropdown from '../Dropdown.jsx';
 
@@ -69,7 +69,7 @@ const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']}
                                 <TagsExp>
                                     <section>
                                         <h5>{singleExp.id}</h5>
-                                        <p>{singleExp.precio}</p>
+                                        <p>{singleExp.precio} por persona</p>
                                     </section>
                                     
                                     <Link to='/' className='link'>Reserva ahora</Link>      
@@ -79,7 +79,7 @@ const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']}
                     )
                 } 
             </GridSearch>
-            <button className='moreButton'><Link to='/search'>Ver más</Link></button>
+            <Buttons className='moreButton'><Link to='/search' className='link'>Ver más</Link></Buttons>
         </ThreeExperiencesSection>
     )
 }
