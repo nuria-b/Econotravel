@@ -2,7 +2,7 @@
 
 export default function Dropdown ({ label, options, onChange, onClick, style, selectStyle }) {
     return (
-      <label>
+      <label style={{display:'inline-block'}}>
         <span id={`span-${label}`} onClick={onClick} style={style}>{label}</span>
         <select id={`select-${label}`} onChange={onChange} style={selectStyle} defaultValue=''>
           <option value='' disabled={true}>Elige una opción</option>
