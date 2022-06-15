@@ -11,7 +11,7 @@ export const ReadMore = ({ children }) => {
   };
   return (
     <p>
-      {isReadMore ? text.slice(0, 150) : text}
+      {isReadMore ? text.slice(0, 1) : text}
       <ReadMoreDetail onClick={toggleReadMore} className="read-or-hide">
         {isReadMore ? "...Leer más" : " Mostrar menos"}
       </ReadMoreDetail>

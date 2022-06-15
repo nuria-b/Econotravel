@@ -24,9 +24,9 @@ export default function Detail() {
     return(
         <ContainerDetail>
             <Breadcrumbs>
-                <Crumb><Link to="/">Home</Link></Crumb>
-                <Crumb><Link to="/search">Search</Link></Crumb>
-                <Crumb><Link to="/search">{etiquetaActiva}</Link></Crumb>
+                <Crumb><Link to="/" className="a">Home</Link></Crumb>
+                <Crumb><Link to="/search" className="a">Search</Link></Crumb>
+                <Crumb><Link to="/search" className="a">{etiquetaActiva}</Link></Crumb>
                 <Crumb>{singleDetail.titulo}</Crumb>
             </Breadcrumbs>
 
@@ -39,14 +39,27 @@ export default function Detail() {
                 </FlexColumn>
 
                 <ReadMore>
-                    <p>{singleDetail.descripcion}</p>
-                    <p>{singleDetail.accesibilidad}</p>
-                    <p>{singleDetail.duracion}</p>
+                    <p>
+                        <h5>Description:</h5>
+                        {singleDetail.descripcion}
+                    </p>
+
+                    <p>
+                        <h5>Accesibilidad:</h5>
+                        {singleDetail.accesibilidad}
+                    </p>
+                    
+                    <p>
+                        <h5>Duración:</h5>
+                        {singleDetail.duracion}
+                    </p>
                 </ReadMore>
                    
                 <DetailReser>
                     <h2>{singleDetail.precio}</h2>
-                    <label for="quantity">Cant:  <input type="number" id="quantity" min="1" max="20"/></label>
+                    <label for="quantity">
+                        Cant:  <input type="number" id="quantity" min="1" max="20"/>
+                    </label>
                     <Link to="/search"><Buttons type="submit">Reservar</Buttons></Link>
                 </DetailReser>
             </InfoDetail>

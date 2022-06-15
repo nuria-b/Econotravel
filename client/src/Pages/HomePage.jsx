@@ -10,7 +10,9 @@ export default function HomePage(){
             <Publicidad>
                 <Link to='/search'><PublicidadButton>Descubre más</PublicidadButton></Link>
             </Publicidad>
+
             <Experiences />
+
             <ContainerTravel>
                 <ImgTravel src={Travel}/>
                 <TxtTravel>
@@ -19,6 +21,7 @@ export default function HomePage(){
                     <Link to='/whoweare'><Buttons>Contáctanos</Buttons> </Link>
                 </TxtTravel>
             </ContainerTravel>
+            
             <Oferta>
                 <OfertaText>No te lo pierdas, regístrate hoy y recibe un 25% de descuento en tu próxima experiencia</OfertaText>
                 <Link to='/search'><OfertaButton>Regístrate Hoy</OfertaButton></Link>

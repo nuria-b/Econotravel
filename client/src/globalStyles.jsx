@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     --font-color-1: #4B7F55;
     --font-color-2: white;
     --font-color-3: black;
+    --font-color-4: #562C9C;
     --font-color-pay: red;
     --bg-page:#ffeabc;
     --bg-nav:;
