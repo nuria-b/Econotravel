@@ -122,6 +122,7 @@ export const HomeButton = styled(Buttons)`
     position: absolute;
     transform: translate(-50%, -50%);
 `
+
 export const ThreeExperiencesSection = styled.section `
     margin-top: 4em;
     h1 {
@@ -177,7 +178,7 @@ export const OfertaText= styled.p`
     top:20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--font-color-2)
+    color: var(--font-color-2);
 `
 
 export const OfertaButton = styled(HomeButton)`
