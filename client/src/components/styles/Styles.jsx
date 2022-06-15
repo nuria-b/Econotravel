@@ -399,8 +399,8 @@ export const Crumb = styled.li`
         content: "";
     }
 
-    a {
-        color: var(--font-color-1);
+    .a {
+        color: var(--font-color-4);
         text-decoration: none;
         
         &:hover {
@@ -430,6 +430,11 @@ export  const DetailReser = styled(Form2)`
 
 export const InfoDetail = styled(FlexRow)`
     justify-content: space-around;
+    
+    h5{
+        font-size: medium;
+        margin: 0 0 0.2em 0;
+    }
 
     @media screen and (max-width: 1200px){
         flex-direction: column;
@@ -444,6 +449,10 @@ export const ReadMoreDetail = styled.span`
 export const ContainerDetail = styled.section`
     padding: 5em;
     min-height: 80.5vh;
+
+    h1{
+        color: var(--font-color-1);
+    }
 `
 
 /*--- WhoWeAre ---*/

@@ -68,7 +68,7 @@ export default function Search (){
                                 <TagsExp>
                                     <section>
                                         <h5>{singleExp.id}</h5>
-                                        <p>{singleExp.precio}</p>
+                                        <p>{singleExp.precio} por persona</p>
                                     </section>
                                     
                                     <Link to='/' className='link'>Reserva ahora</Link>      
