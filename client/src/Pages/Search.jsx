@@ -10,17 +10,34 @@ const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']}
 export default function Search (){
     const [info, setInfo] = useState([])
     const [loading, setLoading] = useState(false)
+    const [valorFiltro, setValorFiltro] = useState('')
+    const [etiquetaActiva,setEtiquetaActiva] = useState('')
 
      useEffect(()=>{
         setLoading(true)
         Getinfo.getAll()
         .then(res =>{ 
-                setInfo(res)
+            let datos = res
+            if(etiquetaActiva){
+                datos=datos.filter(dato=>{
+                    if(etiquetaActiva === 'Ubicación'){
+                        return dato.Ubicacion === valorFiltro
+                    }
+                    if(etiquetaActiva === 'Transporte'){
+                        return dato.Transporte === valorFiltro
+                    }
+                    if(etiquetaActiva === 'Duración'){
+                        return dato.Duracion === valorFiltro
+                    }
+                    return true
+                })
+            }
+                setInfo(datos)
                 setLoading(false)
             })
-    }, [])
+    }, [valorFiltro])
 
-    const [etiquetaActiva,setEtiquetaActiva] = useState('')
+   
 
     const HandleClick = (ev)=> {
         if(ev.target.id === 'span-Ubicación'){
@@ -33,7 +50,11 @@ export default function Search (){
             setEtiquetaActiva('Duración')
         }
       }
-    
+
+      const HandleChange = (ev)=> {
+        setValorFiltro(ev.target.value)
+      }
+
     if (loading) return <section>Cargando...</section>
 
     return(
@@ -43,7 +64,12 @@ export default function Search (){
             <FilterExp>
                 {Desplegables.map((desplegableEtiqueta)=>(
                     <section key={desplegableEtiqueta.titulo}>
-                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} onClick={HandleClick} style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline':''}} />
+                    <Dropdown label={`${desplegableEtiqueta.titulo}`} 
+                    options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} 
+                    onClick={HandleClick} 
+                    onChange={HandleChange}
+                    style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline':''}} 
+                    selectStyle={{display:etiquetaActiva===desplegableEtiqueta.titulo?'':'none'}}/>
                     </section>
                 ))}
             </FilterExp> 

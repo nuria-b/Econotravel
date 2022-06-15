@@ -377,9 +377,7 @@ export const FilterExp = styled(FlexRow)`
         }
     }
 `
-export const DropdownStyle = styled.select `
-    display:none;
-`
+
 
 /*--- Details ---*/
 export const Breadcrumbs = styled.ul`
