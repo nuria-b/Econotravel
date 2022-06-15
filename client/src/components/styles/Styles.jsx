@@ -177,7 +177,7 @@ export const OfertaText= styled.p`
     top:20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--font-color-2)
+    color: var(--font-color-2);
 `
 
 export const OfertaButton = styled(HomeButton)`
