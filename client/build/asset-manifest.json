@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.9e71595b.js",
+    "static/js/787.d4d06c75.chunk.js": "/static/js/787.d4d06c75.chunk.js",
+    "static/media/quienes-somos.jpg": "/static/media/quienes-somos.f5649134dbb3e35d1e5a.jpg",
+    "static/media/travel.avif": "/static/media/travel.577dd0ce15314faaec70.avif",
+    "static/media/logo.png": "/static/media/logo.61778d210d03b787f719.png",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.9e71595b.js.map": "/static/js/main.9e71595b.js.map",
+    "787.d4d06c75.chunk.js.map": "/static/js/787.d4d06c75.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.9e71595b.js"
+  ]
+}
