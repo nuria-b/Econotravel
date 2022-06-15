@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Getinfo from '../servicios/Getinfo.jsx';
-import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp } from '../components/styles/Styles.jsx';
+import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp,  SearchTitle} from '../components/styles/Styles.jsx';
 import { Link } from 'react-router-dom';
 import Dropdown from '../components/Dropdown.jsx';
 
@@ -38,12 +38,12 @@ export default function Search (){
 
     return(
         <>
-            <h1> Experiencias en el área de Barcelona</h1>
+            <SearchTitle> Experiencias en el área de Barcelona</SearchTitle>
 
             <FilterExp>
                 {Desplegables.map((desplegableEtiqueta)=>(
                     <section key={desplegableEtiqueta.titulo}>
-                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} onClick={HandleClick} style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline':''}} />
+                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} onClick={HandleClick} style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline #000 0.1em':'', textUnderlineOffset:etiquetaActiva===desplegableEtiqueta.titulo? '0.5em': '', color: etiquetaActiva===desplegableEtiqueta.titulo? '#0007': ''}} />
                     </section>
                 ))}
             </FilterExp> 

@@ -68,7 +68,7 @@ export const Form2 = styled(FlexColumn)`
 export const NavStyle = styled(FlexRow)`
     justify-content: space-evenly;
     background: var(--bg-nav);
-    position: fixed;
+    //position: fixed;
     width: 100%;
     height: 5em;
     z-index: 2;
@@ -128,6 +128,7 @@ export const ThreeExperiencesSection = styled.section `
     
     h1 {
         text-align: center;
+        color: var(--font-color-1);
     }
 
     .moreButton {
@@ -385,8 +386,14 @@ export const FilterExp = styled(FlexRow)`
         }
     }
 `
+
 export const DropdownStyle = styled.select `
     display:none;
+`
+
+export const SearchTitle= styled.h1`
+    color: var(--font-color-1);
+    text-align: center;
 `
 
 /*--- Details ---*/
