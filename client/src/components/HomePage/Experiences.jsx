@@ -44,7 +44,7 @@ const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']}
             <FilterExp>
                 {Desplegables.map((desplegableEtiqueta)=>(
                     <section key={desplegableEtiqueta.titulo}>
-                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} onClick={HandleClick} style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline':''}} />
+                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} onClick={HandleClick} style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline #000 0.1em':'', textUnderlineOffset:etiquetaActiva===desplegableEtiqueta.titulo? '0.5em': '', color: etiquetaActiva===desplegableEtiqueta.titulo? '#0007': ''}} />
                     </section>
                 ))}
             </FilterExp> 

@@ -64,6 +64,13 @@ export const Form2 = styled(FlexColumn)`
     padding: 2em;
 `
 
+export const SearchContainer = styled.section `   
+    h1 {
+        text-align: center;
+        color: var(--font-color-1);
+    }
+`
+
 /*--- Navbar ---*/
 export const NavStyle = styled(FlexRow)`
     justify-content: space-evenly;
@@ -123,13 +130,8 @@ export const HomeButton = styled(Buttons)`
     transform: translate(-50%, -50%);
 `
 
-export const ThreeExperiencesSection = styled.section `
+export const ThreeExperiencesSection = styled(SearchContainer) `
     margin-top: 4em;
-    
-    h1 {
-        text-align: center;
-        color: var(--font-color-1);
-    }
 
     .moreButton {
         margin-left: 37.5%;
@@ -389,11 +391,6 @@ export const FilterExp = styled(FlexRow)`
 
 export const DropdownStyle = styled.select `
     display:none;
-`
-
-export const SearchTitle= styled.h1`
-    color: var(--font-color-1);
-    text-align: center;
 `
 
 /*--- Details ---*/

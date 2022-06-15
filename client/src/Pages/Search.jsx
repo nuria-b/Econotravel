@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Getinfo from '../servicios/Getinfo.jsx';
-import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp,  SearchTitle} from '../components/styles/Styles.jsx';
+import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp, SearchContainer} from '../components/styles/Styles.jsx';
 import { Link } from 'react-router-dom';
 import Dropdown from '../components/Dropdown.jsx';
 
@@ -37,8 +37,8 @@ export default function Search (){
     if (loading) return <section>Cargando...</section>
 
     return(
-        <>
-            <SearchTitle> Experiencias en el área de Barcelona</SearchTitle>
+        <SearchContainer>
+            <h1> Experiencias en el área de Barcelona</h1>
 
             <FilterExp>
                 {Desplegables.map((desplegableEtiqueta)=>(
@@ -78,6 +78,6 @@ export default function Search (){
                     )
                 } 
             </GridSearch>
-        </>
+        </SearchContainer>
     )
 }
