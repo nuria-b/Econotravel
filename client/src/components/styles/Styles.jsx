@@ -122,6 +122,7 @@ export const HomeButton = styled(Buttons)`
     position: absolute;
     transform: translate(-50%, -50%);
 `
+
 export const ThreeExperiencesSection = styled.section `
     margin-top: 4em;
     h1 {
