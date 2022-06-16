@@ -4,7 +4,8 @@ import {createGlobalStyle} from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   :root{
     --font: Roboto;
-    --bg-img-nav: #4B7F55;
+    --color-img-nav: #4B7F55;
+    --bg-logged-menu: #4B7F55;
     --bg-button: #526956;
     --hover-primary: #88CF4E;
     --hover-secondary: #B986D5;

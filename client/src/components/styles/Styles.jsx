@@ -8,7 +8,7 @@ export const FlexRow = styled.section`
     gap: 1em;
 `
 
-export const FlexColumn = styled.form`
+export const FlexColumn = styled.section`
     display: flex;
     flex-direction: column;
     gap: 0.2em;
@@ -19,7 +19,7 @@ export const Buttons = styled.button`
     border: var(--border);
     color: var(--font-color-2);
     padding: 0.5em 5.5em;
-    box-shadow: 0 0.4em 0.4em -0.4em #000000;
+    box-shadow: 0 0.4em 0.4em -0.4em var(--color-boxShadow);
     margin: 0.5em 0 2em 0;
 
     &:hover{
@@ -109,6 +109,48 @@ export const FormFulfill = styled(FlexRow)`
         &:hover{
             color: var(--hover-secondary)
         }
+    }
+`
+/*--- LoggedMenu ---*/
+export const LoggedMenuUl = styled.ul`
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+`
+
+export const LoggedMenuLi = styled.li`
+    float: left;
+`
+
+export const DropDownContent = styled.section`
+    display: none;
+    position: absolute;
+    background-color: var(--bg-logged-menu);
+    z-index: 3;
+`
+
+export const DropDownLi = styled(LoggedMenuLi)`
+    display: inline-block;
+
+    &:hover ${DropDownContent} {
+        display: block;
+    }
+`
+
+export const LoggedMenuLink = styled.p`
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 0;
+    
+    .link{
+        text-decoration: none;
+        color: var(--font-color-2);
+    }
+
+    &:hover {
+        background-color: var(--hover-secondary);
     }
 `
 
@@ -510,4 +552,3 @@ export const FooterElements = styled(FlexRow)`
         text-decoration: none;
     }   
 `
-
