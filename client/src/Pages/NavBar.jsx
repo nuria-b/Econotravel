@@ -6,18 +6,43 @@ import {FaShoppingBasket} from 'react-icons/fa';
 import {GrFormClose} from 'react-icons/gr';
 import { IconContext } from 'react-icons';
 import { FlexRow, NavStyle, SearchBar, LoggedMenuUl, DropDownContent, DropDownLi, LoggedMenuLink } from '../components/styles/Styles.jsx';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import Getinfo from '../servicios/Getinfo.jsx';
 
 export default function NavBar(){
     const [keyword, setKeyword]= useState('')
+    const [info, setInfo] = useState([])
+    const navigate = useNavigate()
 
     const handleSubmit = e =>{
         e.preventDefault()
+        console.log(keyword)
+        console.log(info)
+        const index = info.findIndex(datoFiltrado =>{
+            const keyWordEnTitulo = datoFiltrado.titulo.toLowerCase().includes(keyword.toLowerCase())
+            const keyWordEnDescripcion = datoFiltrado.descripcion.toLowerCase().includes(keyword.toLowerCase())
+            const keyWordEnAccesibilidad = datoFiltrado.accesibilidad.toLowerCase().includes(keyword.toLowerCase())
+
+            return keyWordEnTitulo||keyWordEnDescripcion||keyWordEnAccesibilidad
+        })
+        console.log(index)
+        navigate(`/${index}/detail`,{state:{}})
     }
 
     const handleFilter = e =>{
         setKeyword(e.target.value)
     }
+
+    
+
+    useEffect(()=>{
+        Getinfo.getAll()
+        .then(res =>{ 
+                setInfo(res)
+            })
+    }, [])
+
 
     return(
         <header>
