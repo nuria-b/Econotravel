@@ -69,7 +69,7 @@ export default function Search (){
                     onClick={HandleClick} 
                     onChange={HandleChange}
                     style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline #000 0.1em':'', textUnderlineOffset:etiquetaActiva===desplegableEtiqueta.titulo? '0.5em': '', color: etiquetaActiva===desplegableEtiqueta.titulo? '#0007': ''}}
-                    selectStyle={{display:etiquetaActiva===desplegableEtiqueta.titulo?'block':'none'}}/>
+                    selectStyle={{display:etiquetaActiva===desplegableEtiqueta.titulo?'block':'none', marginTop:etiquetaActiva===desplegableEtiqueta.titulo? '1em' : ''}}/>
                     </section>
                 ))}
             </FilterExp> 

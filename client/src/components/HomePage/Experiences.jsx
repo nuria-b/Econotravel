@@ -4,24 +4,37 @@ import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, 
 import { Link } from 'react-router-dom';
 import Dropdown from '../Dropdown.jsx';
 
-export default function Experiences () {
-
 const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']},{titulo:'Transporte', valores:['Bicicleta','A pie','Barco']},{titulo:'Duración', valores:['Excursión corta','Excursión larga']}]
 
-
+export default function Experiences () {
     const [info, setInfo] = useState([])
     const [loading, setLoading] = useState(false)
+    const [valorFiltro, setValorFiltro] = useState('')
+    const [etiquetaActiva,setEtiquetaActiva] = useState('')
 
      useEffect(()=>{
         setLoading(true)
         Getinfo.getAll()
-        .then(res =>{ 
-                setInfo(res.slice(0,3))
+            .then(res =>{ 
+                let datos = res
+                if(etiquetaActiva){
+                    datos=datos.filter(dato=>{
+                        if(etiquetaActiva === 'Ubicación'){
+                            return dato.Ubicacion === valorFiltro
+                        }
+                        if(etiquetaActiva === 'Transporte'){
+                            return dato.Transporte === valorFiltro
+                        }
+                        if(etiquetaActiva === 'Duración'){
+                            return dato.Duracion === valorFiltro
+                        }
+                        return true
+                    })
+                }
+                setInfo(datos.slice(0,3))
                 setLoading(false)
             })
-    }, [])
-
-    const [etiquetaActiva,setEtiquetaActiva] = useState('')
+    }, [valorFiltro])
 
     const HandleClick = (ev)=> {
         if(ev.target.id === 'span-Ubicación'){
@@ -33,8 +46,12 @@ const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']}
         if(ev.target.id === 'span-Duración'){
             setEtiquetaActiva('Duración')
         }
-      }
+    }
     
+    const HandleChange = (ev)=> {
+        setValorFiltro(ev.target.value)
+    }
+
     if (loading) return <section>Cargando...</section>
 
     return(
@@ -44,7 +61,9 @@ const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']}
             <FilterExp>
                 {Desplegables.map((desplegableEtiqueta)=>(
                     <section key={desplegableEtiqueta.titulo}>
-                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} onClick={HandleClick} style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline #000 0.1em':'', textUnderlineOffset:etiquetaActiva===desplegableEtiqueta.titulo? '0.5em': '', color: etiquetaActiva===desplegableEtiqueta.titulo? '#0007': ''}} />
+                   <Dropdown label={`${desplegableEtiqueta.titulo}`} 
+                    options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} 
+                    onClick={HandleClick} onChange={HandleChange} style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline #000 0.1em':'', textUnderlineOffset:etiquetaActiva===desplegableEtiqueta.titulo? '0.5em': '', color: etiquetaActiva===desplegableEtiqueta.titulo? '#0007': ''}}  selectStyle={{display:etiquetaActiva===desplegableEtiqueta.titulo?'block':'none', marginTop:etiquetaActiva===desplegableEtiqueta.titulo? '1em' : ''}}/>
                     </section>
                 ))}
             </FilterExp> 
