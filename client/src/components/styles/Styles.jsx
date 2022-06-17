@@ -549,7 +549,7 @@ export const InfoW = styled.section`
     text-align: justify;
 
      @media (max-width: 1020px){
-        argin-top: -4em;
+        margin-top: -4em;
         padding: 4em;
     }
 `
