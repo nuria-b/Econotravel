@@ -109,5 +109,19 @@
                 "Transporte": "A pie",
                 "Duracion": "Excursión larga"
             }
-        ]
+        ],
+        "users": [
+            {
+              "email": "ana@try.com",
+              "password": "$2a$10$Ye4rVwMr6OTsxwH90jLTbeUbKxdc/acX81DJbOOvVi6R/CUwlgQgO",
+              "nombre": "Anastasia",
+              "id": 1
+            },
+            {
+              "email": "dim@try.com",
+              "password": "$2a$10$gSvUDEfv0cIKimbdJn7UxuZRUYGG8n8aoD3gaBBnfEbJYHtJMUFXK",
+              "nombre": "Dimitri",
+              "id": 2
+            }
+          ]
 }

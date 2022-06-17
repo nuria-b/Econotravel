@@ -10,11 +10,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Getinfo from '../servicios/Getinfo.jsx';
 
-export default function NavBar(){
+export default function NavBar({user}){
     const [keyword, setKeyword]= useState('')
     const [info, setInfo] = useState([])
     const navigate = useNavigate()
-
+    /*const user= { 
+        name : 'Cris',
+        password: 'abc123'
+    }*/
     const handleSubmit = e =>{
         e.preventDefault()
         console.log(keyword)
@@ -60,19 +63,20 @@ export default function NavBar(){
                     </form>
 
                     <FlexRow>
+                    { !user ? (<Link to='/login'><button><GiGorilla /></button></Link>
+                        ):(
                         <LoggedMenuUl>
-                            <DropDownLi>
-                                <button><GiGorilla /></button>
-                                <DropDownContent>
-                                    {" "}
-                                    <LoggedMenuLink><Link to='/myprofile' className='link'>Mi perfil</Link></LoggedMenuLink>
-                                    <LoggedMenuLink><Link to='/myreservations' className='link'>Mis reservas</Link></LoggedMenuLink>
-                                    <LoggedMenuLink><Link to='/' className='link'>Cerrar sesión</Link></LoggedMenuLink>
-                                </DropDownContent>
-                            </DropDownLi>
-                        </LoggedMenuUl>
-
-                        <Link to='/login'><button><GiGorilla /></button></Link>
+                                <DropDownLi>
+                                    <button><GiGorilla /></button>
+                                    <DropDownContent>
+                                        {" "}
+                                        <LoggedMenuLink><Link to='/myprofile' className='link'>Mi perfil</Link></LoggedMenuLink>
+                                        <LoggedMenuLink><Link to='/myreservations' className='link'>Mis reservas</Link></LoggedMenuLink>
+                                        <LoggedMenuLink><Link to='/' className='link'>Cerrar sesión</Link></LoggedMenuLink>
+                                    </DropDownContent>
+                                </DropDownLi>
+                            </LoggedMenuUl>)
+                    }     
 
                         <button><FaShoppingBasket /></button>
                     </FlexRow>
