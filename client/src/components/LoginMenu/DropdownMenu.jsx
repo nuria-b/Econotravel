@@ -1,29 +1,22 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from "react";
+import {GiGorilla} from 'react-icons/gi';
+import { Link } from "react-router-dom";
 
-  render = () => {
-    return (
-      <StyledUl>
-        <StyledLi>
-          <StyledA onClick={() => this.handleClick("Home")}>Home</StyledA>
-        </StyledLi>
-        <StyledLi>
-          <StyledA onClick={() => this.handleClick("News")}>Home</StyledA>
-        </StyledLi>
-        <DropDownLi>
-          <Dropbtn onClick={() => this.handleClick("DropDown")}>
-            DropDown
-          </Dropbtn>
-          <DropDownContent>
-            {" "}
-            <SubA onClick={() => this.handleClick("Link1")}>Link 1</SubA>
-            <SubA onClick={() => this.handleClick("Link2")}>Link 2</SubA>
-            <SubA onClick={() => this.handleClick("Link3")}>Link 3</SubA>
-          </DropDownContent>
-        </DropDownLi>
-      </StyledUl>
-    );
-  };
+export default function Menu(){
+      return (
+        <ul>
+          <li>
+            <button>
+              <Link to='/login'><button><GiGorilla /></button></Link>
+            </button>
+            <section>
+              {" "}
+              <li>Link 1</li>
+              <li>Link 2</li>
+              <li>Link 3</li>
+            </section>
+          </li>
+        </ul>
+      ) 
 }
-
-export default Menu;
+  

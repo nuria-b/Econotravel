@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import logo from '../images/logo.png'
-import {GiGorilla} from 'react-icons/gi';
 import {BiSearchAlt} from 'react-icons/bi';
-import {FaShoppingBasket} from 'react-icons/fa';
 import {GrFormClose} from 'react-icons/gr';
 import { IconContext } from 'react-icons';
 import { FlexRow, NavStyle, SearchBar } from '../components/styles/Styles.jsx';
 import { Link } from "react-router-dom";
+import DropdownMenu from "../components/LoginMenu/DropdownMenu.jsx";
 
 export default function NavBar(){
     const [keyword, setKeyword]= useState('')
@@ -35,8 +34,7 @@ export default function NavBar(){
                     </form>
 
                     <FlexRow>
-                        <Link to='/login'><button><GiGorilla /></button></Link>
-                        <button><FaShoppingBasket /></button>
+                        <DropdownMenu />
                     </FlexRow>
                 </IconContext.Provider>
             </NavStyle>        
