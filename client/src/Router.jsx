@@ -8,6 +8,8 @@ import WhoWeAre from './components/Footer/WhoWeAre.jsx';
 import HowDoesItWork from './components/Footer/HowDoesItWork.jsx';
 import PaymentMethods from './components/Footer/PaymentMethods.jsx';
 import Details from "./Pages/Details";
+import MyProfile from "./components/LoginMenu/MyProfile";
+import MyReservations from "./components/LoginMenu/MyReservations";
 
 export default function Router() {
     return(
@@ -17,6 +19,8 @@ export default function Router() {
                     <Route exact path='/search' element={<Search />}></Route>
                     <Route exact path='/:id/detail' element={<Details />}/>
                     <Route exact path='/login' element={<Login />}/>
+                    <Route exact path='/myprofile' element={<MyProfile />}/>
+                    <Route exact path='/myreservations' element={<MyReservations />}/>
                     <Route exact path='/register' element={<Register />}/>
                     <Route exact path='/reservation' element={<Reservation />}/>
                     <Route exact path='/howdoesitwork' element={<HowDoesItWork />}/>

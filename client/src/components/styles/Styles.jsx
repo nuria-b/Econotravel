@@ -8,7 +8,7 @@ export const FlexRow = styled.section`
     gap: 1em;
 `
 
-export const FlexColumn = styled.form`
+export const FlexColumn = styled.section`
     display: flex;
     flex-direction: column;
     gap: 0.2em;
@@ -19,7 +19,7 @@ export const Buttons = styled.button`
     border: var(--border);
     color: var(--font-color-2);
     padding: 0.5em 5.5em;
-    box-shadow: 0 0.4em 0.4em -0.4em #000000;
+    box-shadow: 0 0.4em 0.4em -0.4em var(--color-boxShadow);
     margin: 0.5em 0 2em 0;
 
     &:hover{
@@ -64,6 +64,13 @@ export const Form2 = styled(FlexColumn)`
     padding: 2em;
 `
 
+export const SearchContainer = styled.section `   
+    h1 {
+        text-align: center;
+        color: var(--font-color-1);
+    }
+`
+
 /*--- Navbar ---*/
 export const NavStyle = styled(FlexRow)`
     justify-content: space-evenly;
@@ -104,76 +111,55 @@ export const FormFulfill = styled(FlexRow)`
         }
     }
 `
-
-/*--- Login menu ---*/
-export const StyledUl = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-`;
-
-export const StyledLi = styled.li`
-  float: left;
-`;
-
-export const Dropbtn = styled.div`
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-`;
-
-export const DropDownContent = styled.div`
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-`;
-
-export const DropDownLi = styled(StyledLi)`
-  display: inline-block;
-  &:hover {
-    background-color: red;
-  }
-  &:hover ${DropDownContent} {
-    display: block;
-  }
+/*--- LoggedMenu ---*/
+export const LoggedMenuUl = styled.ul`
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 `
 
-export const StyledA = styled.a`
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  &:hover {
-    background-color: red;
-  }
-`;
+export const LoggedMenuLi = styled.li`
+    float: left;
+`
 
-export const SubA = styled.a`
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  &:hover {
-    background-color: #f1f1f1;
-  }
-`;
+export const DropDownContent = styled.section`
+    display: none;
+    position: absolute;
+    background-color: var(--bg-logged-menu);
+    z-index: 3;
+`
 
+export const DropDownLi = styled(LoggedMenuLi)`
+    display: inline-block;
+
+    &:hover ${DropDownContent} {
+        display: block;
+    }
+`
+
+export const LoggedMenuLink = styled.p`
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 0;
+    
+    .link{
+        text-decoration: none;
+        color: var(--font-color-2);
+    }
+
+    &:hover {
+        background-color: var(--hover-secondary);
+    }
+`
 
 /*--- Homepage ---*/
 export const HomeStyle = styled(FlexColumn)`
     justify-content: center;
     align-content: center;
     align-items: center;
-    gap: 5em;
+    gap: 2em;
     
     h2{
         color:  var(--font-color-1);
@@ -186,23 +172,23 @@ export const HomeButton = styled(Buttons)`
     transform: translate(-50%, -50%);
 `
 
-export const ThreeExperiencesSection = styled.section `
+export const ThreeExperiencesSection = styled(SearchContainer) `
     margin-top: 4em;
-    h1 {
-        text-align: center;
-    }
-    .moreButton {
-        margin-bottom:4em;
-        margin-left: 22em;
-        width: 9em;
-        font-size: 1.2em;
-        text-decoration:none !important;
-    }
 
+    .moreButton {
+        margin-left: 37.5%;
+        font-size: 1.2em;
+        margin-bottom: 0;
+
+        .link{
+            color: var(--font-color-2);
+            text-decoration: none;
+        }
+    }
 `
 
 export const Publicidad = styled(HeroImg)`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1622228194263-b3369caf4ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1622228194263-b3369caf4ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     width: 974px;
     height: 543px;
     top: 4.5em;
@@ -214,8 +200,9 @@ export const PublicidadButton = styled(HomeButton)`
     left: 50%;
 `
 
-export const ContainerTravel= styled.section`
-    display: flex;
+export const ContainerTravel= styled(FlexRow)`
+    justify-content: center;
+    gap: 2em;
     margin-top: 5em;
     margin-left: 2em;
 `
@@ -226,13 +213,15 @@ export const ImgTravel= styled.img`
 `
 
 export const TxtTravel= styled.section`
-    margin-left: 2em;
+    width: 35em;
+    text-align: justify;
 `
 
 export const Oferta= styled(HeroImg)`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1482356432770-3a99f07aba35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1482356432770-3a99f07aba35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
     width: 910px;
     height: 394px;
+    margin: 2em 0 4em 0;
 `
 
 export const OfertaText= styled.p`
@@ -441,9 +430,7 @@ export const FilterExp = styled(FlexRow)`
         }
     }
 `
-export const DropdownStyle = styled.select `
-    display:none;
-`
+
 
 /*--- Details ---*/
 export const Breadcrumbs = styled.ul`
@@ -463,8 +450,8 @@ export const Crumb = styled.li`
         content: "";
     }
 
-    a {
-        color: var(--font-color-1);
+    .a {
+        color: var(--font-color-4);
         text-decoration: none;
         
         &:hover {
@@ -494,6 +481,11 @@ export  const DetailReser = styled(Form2)`
 
 export const InfoDetail = styled(FlexRow)`
     justify-content: space-around;
+    
+    h5{
+        font-size: medium;
+        margin: 0 0 0.2em 0;
+    }
 
     @media screen and (max-width: 1200px){
         flex-direction: column;
@@ -508,6 +500,10 @@ export const ReadMoreDetail = styled.span`
 export const ContainerDetail = styled.section`
     padding: 5em;
     min-height: 80.5vh;
+
+    h1{
+        color: var(--font-color-1);
+    }
 `
 
 /*--- WhoWeAre ---*/
@@ -556,4 +552,3 @@ export const FooterElements = styled(FlexRow)`
         text-decoration: none;
     }   
 `
-

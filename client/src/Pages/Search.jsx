@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Getinfo from '../servicios/Getinfo.jsx';
-import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp } from '../components/styles/Styles.jsx';
+import { ContainerBtExp, ContainerExp, ContainerImg, ImgExp, TagsExp, TitleExp, GridSearch, FilterExp, SearchContainer} from '../components/styles/Styles.jsx';
 import { Link } from 'react-router-dom';
 import Dropdown from '../components/Dropdown.jsx';
 
@@ -10,17 +10,34 @@ const Desplegables=[{titulo:'Ubicación', valores:['Montaña','Ciudad','Playa']}
 export default function Search (){
     const [info, setInfo] = useState([])
     const [loading, setLoading] = useState(false)
+    const [valorFiltro, setValorFiltro] = useState('')
+    const [etiquetaActiva,setEtiquetaActiva] = useState('')
 
      useEffect(()=>{
         setLoading(true)
         Getinfo.getAll()
         .then(res =>{ 
-                setInfo(res)
+            let datos = res
+            if(etiquetaActiva){
+                datos=datos.filter(dato=>{
+                    if(etiquetaActiva === 'Ubicación'){
+                        return dato.Ubicacion === valorFiltro
+                    }
+                    if(etiquetaActiva === 'Transporte'){
+                        return dato.Transporte === valorFiltro
+                    }
+                    if(etiquetaActiva === 'Duración'){
+                        return dato.Duracion === valorFiltro
+                    }
+                    return true
+                })
+            }
+                setInfo(datos)
                 setLoading(false)
             })
-    }, [])
+    }, [valorFiltro])
 
-    const [etiquetaActiva,setEtiquetaActiva] = useState('')
+   
 
     const HandleClick = (ev)=> {
         if(ev.target.id === 'span-Ubicación'){
@@ -33,17 +50,26 @@ export default function Search (){
             setEtiquetaActiva('Duración')
         }
       }
-    
+
+      const HandleChange = (ev)=> {
+        setValorFiltro(ev.target.value)
+      }
+
     if (loading) return <section>Cargando...</section>
 
     return(
-        <>
+        <SearchContainer>
             <h1> Experiencias en el área de Barcelona</h1>
 
             <FilterExp>
                 {Desplegables.map((desplegableEtiqueta)=>(
                     <section key={desplegableEtiqueta.titulo}>
-                    <Dropdown label={`${desplegableEtiqueta.titulo}`} options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} onClick={HandleClick} style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline':''}} />
+                    <Dropdown label={`${desplegableEtiqueta.titulo}`} 
+                    options={desplegableEtiqueta.valores.map(valor=>({value:valor,label:valor}))} 
+                    onClick={HandleClick} 
+                    onChange={HandleChange}
+                    style={{textDecoration:etiquetaActiva===desplegableEtiqueta.titulo?'underline #000 0.1em':'', textUnderlineOffset:etiquetaActiva===desplegableEtiqueta.titulo? '0.5em': '', color: etiquetaActiva===desplegableEtiqueta.titulo? '#0007': ''}}
+                    selectStyle={{display:etiquetaActiva===desplegableEtiqueta.titulo?'block':'none', marginTop:etiquetaActiva===desplegableEtiqueta.titulo? '1em' : ''}}/>
                     </section>
                 ))}
             </FilterExp> 
@@ -68,7 +94,7 @@ export default function Search (){
                                 <TagsExp>
                                     <section>
                                         <h5>{singleExp.id}</h5>
-                                        <p>{singleExp.precio}</p>
+                                        <p>{singleExp.precio} por persona</p>
                                     </section>
                                     
                                     <Link to='/' className='link'>Reserva ahora</Link>      
@@ -78,6 +104,6 @@ export default function Search (){
                     )
                 } 
             </GridSearch>
-        </>
+        </SearchContainer>
     )
 }

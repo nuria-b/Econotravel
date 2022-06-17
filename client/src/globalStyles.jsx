@@ -4,7 +4,8 @@ import {createGlobalStyle} from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   :root{
     --font: Roboto;
-    --bg-img-nav: #4B7F55;
+    --color-img-nav: #4B7F55;
+    --bg-logged-menu: #4B7F55;
     --bg-button: #526956;
     --hover-primary: #88CF4E;
     --hover-secondary: #B986D5;
@@ -13,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     --font-color-1: #4B7F55;
     --font-color-2: white;
     --font-color-3: black;
+    --font-color-4: #562C9C;
     --font-color-pay: red;
     --bg-page:#ffeabc;
     --bg-nav:;
