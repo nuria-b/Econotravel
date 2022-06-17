@@ -193,6 +193,19 @@ export const Publicidad = styled(HeroImg)`
     height: 543px;
     top: 4.5em;
     margin-top: 2em;
+    @media (max-width: 1200px) {
+        &{
+            width: 674px;
+            height: 343px;  
+        }
+    }
+
+    @media (max-width: 700px) {
+        &{
+            width: 411px;
+            height: 200px;     
+        }
+    } 
 `
 
 export const PublicidadButton = styled(HomeButton)`
