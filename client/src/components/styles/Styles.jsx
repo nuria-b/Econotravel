@@ -249,7 +249,20 @@ export const SearchBar = styled(FlexRow)`
         border: none;
         width: 60vmin;
         height: 3em;
+        
+        @media (max-width: 1200px) {
+            &{
+                width: 40vmin;
+            }
+        }
+
+        @media (max-width: 700px) {
+            &{
+                width: 20vmin;
+            }
+    } 
     }
+     
 `
 
 /*--- FormReservation ---*/
