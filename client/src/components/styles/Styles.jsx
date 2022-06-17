@@ -218,6 +218,11 @@ export const ContainerTravel= styled(FlexRow)`
     gap: 2em;
     margin-top: 5em;
     margin-left: 2em;
+    @media (max-width: 1200px) {
+        &{
+            flex-wrap: wrap;
+        }
+    }
 `
 
 export const ImgTravel= styled.img`
@@ -228,6 +233,11 @@ export const ImgTravel= styled.img`
 export const TxtTravel= styled.section`
     width: 35em;
     text-align: justify;
+    @media (max-width: 1000px) {
+        &{
+                width: 70%;
+        }
+    }
 `
 
 export const Oferta= styled(HeroImg)`
