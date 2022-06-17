@@ -24,7 +24,7 @@ export default function HomePage(){
             
             <Oferta>
                 <OfertaText>No te lo pierdas, regístrate hoy y recibe un 25% de descuento en tu próxima experiencia</OfertaText>
-                <Link to='/search'><OfertaButton>Regístrate Hoy</OfertaButton></Link>
+                <Link to='/register'><OfertaButton>Regístrate Hoy</OfertaButton></Link>
             </Oferta>
         </HomeStyle>
     )

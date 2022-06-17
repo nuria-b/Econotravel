@@ -17,8 +17,6 @@ export default function NavBar(){
 
     const handleSubmit = e =>{
         e.preventDefault()
-        console.log(keyword)
-        console.log(info)
         const index = info.findIndex(datoFiltrado =>{
             const keyWordEnTitulo = datoFiltrado.titulo.toLowerCase().includes(keyword.toLowerCase())
             const keyWordEnDescripcion = datoFiltrado.descripcion.toLowerCase().includes(keyword.toLowerCase())
@@ -26,8 +24,11 @@ export default function NavBar(){
 
             return keyWordEnTitulo||keyWordEnDescripcion||keyWordEnAccesibilidad
         })
-        console.log(index)
-        navigate(`/${index}/detail`,{state:{}})
+        if(index>-1){
+            navigate(`/${index}/detail`,{state:{}})
+        }
+        else{setKeyword("")}
+        
     }
 
     const handleFilter = e =>{
