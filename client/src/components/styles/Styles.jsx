@@ -245,6 +245,19 @@ export const Oferta= styled(HeroImg)`
     width: 910px;
     height: 394px;
     margin: 2em 0 4em 0;
+    @media (max-width: 1200px) {
+        &{
+            width: 674px;
+            height: 343px;  
+        }
+    }
+
+    @media (max-width: 700px) {
+        &{
+            width: 411px;
+            height: 200px;     
+        }
+    } 
 `
 
 export const OfertaText= styled.p`
