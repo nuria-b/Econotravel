@@ -193,6 +193,19 @@ export const Publicidad = styled(HeroImg)`
     height: 543px;
     top: 4.5em;
     margin-top: 2em;
+    @media (max-width: 1200px) {
+        &{
+            width: 674px;
+            height: 343px;  
+        }
+    }
+
+    @media (max-width: 700px) {
+        &{
+            width: 411px;
+            height: 200px;     
+        }
+    } 
 `
 
 export const PublicidadButton = styled(HomeButton)`
@@ -205,6 +218,11 @@ export const ContainerTravel= styled(FlexRow)`
     gap: 2em;
     margin-top: 5em;
     margin-left: 2em;
+    @media (max-width: 1200px) {
+        &{
+            flex-wrap: wrap;
+        }
+    }
 `
 
 export const ImgTravel= styled.img`
@@ -215,6 +233,11 @@ export const ImgTravel= styled.img`
 export const TxtTravel= styled.section`
     width: 35em;
     text-align: justify;
+    @media (max-width: 1000px) {
+        &{
+                width: 70%;
+        }
+    }
 `
 
 export const Oferta= styled(HeroImg)`
@@ -222,6 +245,19 @@ export const Oferta= styled(HeroImg)`
     width: 910px;
     height: 394px;
     margin: 2em 0 4em 0;
+    @media (max-width: 1200px) {
+        &{
+            width: 674px;
+            height: 343px;  
+        }
+    }
+
+    @media (max-width: 700px) {
+        &{
+            width: 411px;
+            height: 200px;     
+        }
+    } 
 `
 
 export const OfertaText= styled.p`
@@ -249,7 +285,20 @@ export const SearchBar = styled(FlexRow)`
         border: none;
         width: 60vmin;
         height: 3em;
+        
+        @media (max-width: 1200px) {
+            &{
+                width: 40vmin;
+            }
+        }
+
+        @media (max-width: 700px) {
+            &{
+                width: 20vmin;
+            }
+    } 
     }
+     
 `
 
 /*--- FormReservation ---*/
@@ -536,7 +585,7 @@ export const InfoW = styled.section`
     text-align: justify;
 
      @media (max-width: 1020px){
-        argin-top: -4em;
+        margin-top: -4em;
         padding: 4em;
     }
 `

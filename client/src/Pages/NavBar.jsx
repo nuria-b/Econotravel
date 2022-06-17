@@ -20,8 +20,6 @@ export default function NavBar({user}){
     }*/
     const handleSubmit = e =>{
         e.preventDefault()
-        console.log(keyword)
-        console.log(info)
         const index = info.findIndex(datoFiltrado =>{
             const keyWordEnTitulo = datoFiltrado.titulo.toLowerCase().includes(keyword.toLowerCase())
             const keyWordEnDescripcion = datoFiltrado.descripcion.toLowerCase().includes(keyword.toLowerCase())
@@ -29,8 +27,11 @@ export default function NavBar({user}){
 
             return keyWordEnTitulo||keyWordEnDescripcion||keyWordEnAccesibilidad
         })
-        console.log(index)
-        navigate(`/${index}/detail`,{state:{}})
+        if(index>-1){
+            navigate(`/${index}/detail`,{state:{}})
+        }
+        else{setKeyword("")}
+        
     }
 
     const handleFilter = e =>{
@@ -55,7 +56,7 @@ export default function NavBar({user}){
                 <IconContext.Provider value={{ size:'2.5em', color:'var(--color-img-nav)' }}>
                     <form onSubmit={ handleSubmit }>
                         <SearchBar> 
-                                <input onChange={ handleFilter } type='text' placeholder='Busca una actividad, un lugar,...' id='search' value={keyword}/>
+                                <input onChange={ handleFilter } type='text' placeholder='Busca una actividad, un lugar...' id='search' value={keyword}/>
                                 <button htmlFor='search'>
                                     {!keyword.length ? <BiSearchAlt /> : <GrFormClose/>}
                                 </button>   
